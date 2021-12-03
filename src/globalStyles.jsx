@@ -25,8 +25,10 @@ export const GlobalStyles = createGlobalStyle`
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
 
-// Colors
 
+
+:root {
+  // Colors
 --color-main-normal: hsl(22, 65%, 57%);
 --color-main-light: hsl(21, 94%, 75%);
 --color-main-dark: hsl(0, 65%, 49%);
@@ -43,6 +45,10 @@ export const GlobalStyles = createGlobalStyle`
 --color-gray-700: hsl(0, 0%, 10%);
 --color-gray-800: hsl(0, 0%, 6%);
 
+//animaion 
+ --transition: all 0.5s;
+}
+
 
 *,
 *::before,
@@ -55,15 +61,17 @@ export const GlobalStyles = createGlobalStyle`
 html {
   font-size: 81.25%;
 
-  ${screenSize.lg`
-     font-size: 100%;
-  `}
-   ${screenSize.md`
-     font-size: 93.75%;
-  `}
   ${screenSize.sm`
      font-size: 87.5%;
   `}
+  ${screenSize.md`
+  font-size: 93.75%;
+  `}
+  ${screenSize.lg`
+     font-size: 100%;
+  `}
+
+  
 }
 
 body {
