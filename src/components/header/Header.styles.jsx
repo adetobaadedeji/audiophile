@@ -4,7 +4,7 @@ import { screenSize } from '../../globalStyles'
 
 export const HeaderContainer = styled.section`
 	width: 100%;
-	height: 5rem;
+	height: 6rem;
 	background-color: var(--color-black);
 	color: var(--color-gray-200);
 	${screenSize.md`
@@ -14,7 +14,7 @@ export const HeaderContainer = styled.section`
 export const HeaderContent = styled.div`
 	width: 100%;
 	height: 100%;
-	padding: 0 20px;
+	padding: 0 1.25rem;
 	margin: 0 auto;
 	border-bottom: 0.1rem solid var(--color-gray-700);
 	display: flex;
@@ -26,7 +26,7 @@ export const HeaderContent = styled.div`
 		padding: 0 40px;
 
 		.first-child {
-			margin-right: 40px;
+			margin-right: 45px;
 		}
 		.last-child {
 			margin-left: auto;
@@ -46,9 +46,17 @@ export const HeaderContent = styled.div`
 		width: 77%;
 	`}
 `
+
+export const MenuHamburgerContainer = styled.div`
+	${screenSize.md`
+		display: none;
+	`}
+`
 export const LogoContainer = styled.div`
 	margin-right: 30px;
+	display: flex;
 `
+export const Image = styled.img``
 
 export const MenuContainer = styled.div`
 	display: none;
@@ -61,7 +69,6 @@ export const MenuContainer = styled.div`
 export const CartLogoContainer = styled.div`
 	display: flex;
 `
-
 export const MenuLink = styled(NavLink)`
 	text-decoration: none;
 	color: var(--color-gray-200);
@@ -75,14 +82,12 @@ export const MenuLink = styled(NavLink)`
 		transition: var(--transition);
 		color: var(--color-main-normal);
 	}
-
 	&.active {
 		transition: var(--transition);
 		color: var(--color-main-normal);
 	}
-
 	${screenSize.md`
-		margin-right:30px;
+		margin-right: 30px;
 	`}
 	${screenSize.xl`
 		margin-right: 40px;

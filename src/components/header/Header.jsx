@@ -5,22 +5,25 @@ import {
 	CartLogoContainer,
 	HeaderContainer,
 	HeaderContent,
+	Image,
 	LogoContainer,
 	MenuContainer,
+	MenuHamburgerContainer,
 	MenuLink
 } from './Header.styles'
 import { links } from '../../utils/datas'
+import MenuHamburger from '../menuHamburger/MenuHamburger'
 
 const Header = () => {
 	return (
 		<div>
 			<HeaderContainer>
 				<HeaderContent>
-					{/* <CartLogoContainer className='first-child'>
-						<img src={icon_cart} alt='cart icon' />
-					</CartLogoContainer> */}
+					<MenuHamburgerContainer className='first-child'>
+						<MenuHamburger />
+					</MenuHamburgerContainer>
 					<LogoContainer>
-						<img src={logo} alt='audiphile logo' />
+						<Image src={logo} alt='audiphile logo' />
 					</LogoContainer>
 					<MenuContainer>
 						{links.map(({ id, text, url }) => (
@@ -30,7 +33,7 @@ const Header = () => {
 						))}
 					</MenuContainer>
 					<CartLogoContainer className='last-child'>
-						<img src={icon_cart} alt='cart icon' />
+						<Image src={icon_cart} alt='cart icon' />
 					</CartLogoContainer>
 				</HeaderContent>
 			</HeaderContainer>
