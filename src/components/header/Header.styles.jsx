@@ -4,27 +4,37 @@ import { screenSize } from '../../globalStyles'
 
 export const HeaderContainer = styled.section`
 	width: 100%;
-	height: 6rem;
-	background-color: var(--color-black);
+	height: 7rem;
+	background-color: var(--color-gray-700);
 	color: var(--color-gray-200);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2000;
+	
 	${screenSize.md`
-			height: 6rem;
+		height: 5.5rem;
+		padding: 0 40px;
+	`}
+	${screenSize.lg`
+		padding: 0;
 	`}
 `
 export const HeaderContent = styled.div`
 	width: 100%;
 	height: 100%;
-	padding: 0 1.25rem;
+	padding: 0 20px;
 	margin: 0 auto;
-	border-bottom: 0.1rem solid var(--color-gray-700);
+	border-bottom: 2px solid var(--color-gray-600);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
 	${screenSize.sm`
 		justify-content: flex-start;
-		padding: 0 40px;
-
+			padding: 0 40px;
+			
 		.first-child {
 			margin-right: 45px;
 		}
@@ -34,17 +44,23 @@ export const HeaderContent = styled.div`
 	`}
 	${screenSize.md`
 		justify-content: space-between;
-	
+		padding: 0;
 		.last-child {
 			margin-left: 40px;
 		}
 	`}
 	${screenSize.lg`
-		width: 90%;
+		width: 95%;
 	`}
+
 	${screenSize.xl`
-		width: 77%;
+		width: 85%;
+		
 	`}
+
+	@media (min-width: 1366px) {
+		width: 72%;
+	}
 `
 
 export const MenuHamburgerContainer = styled.div`
@@ -53,8 +69,10 @@ export const MenuHamburgerContainer = styled.div`
 	`}
 `
 export const LogoContainer = styled.div`
-	margin-right: 30px;
 	display: flex;
+	${screenSize.md`
+		margin-right: 30px;
+	`}
 `
 export const Image = styled.img``
 

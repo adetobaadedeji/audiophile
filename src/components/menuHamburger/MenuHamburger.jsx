@@ -1,16 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { toggleMenu, toggleStateSelector } from '../../redux/slices/menuToggleSlice'
 import { HambugerContainer, Hamburger } from './MenuHamburger.styles'
 
 const MenuHamburger = () => {
-	const [menuToggle, setMenuToggle] = useState(false)
+	const toggleState = useSelector(toggleStateSelector)
+	const dispatch = useDispatch()
 
 	const handleMenuToggle = () => {
-		setMenuToggle(!menuToggle)
+		dispatch(toggleMenu(!toggleState))
 	}
 
 	return (
 		<HambugerContainer onClick={handleMenuToggle}>
-			<Hamburger menuToggle={menuToggle}/>
+			<Hamburger toggleState={toggleState} />
 		</HambugerContainer>
 	)
 }

@@ -11,7 +11,7 @@ function App() {
 				<GlobalStyles />
 				<Header />
 				<Switch>
-					<Route exact path='/home' component={Homepage}/>
+					<Route exact path='/' component={Homepage}/>
 				</Switch>
 			</Router>
 		</div>

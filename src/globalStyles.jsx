@@ -3,7 +3,9 @@ import { css, createGlobalStyle } from 'styled-components'
 // Media Querie Breakpoints
 export const breakpoints = {
 	sm: '480px',
-	md: '769px',
+  nsm: '600px',
+	md: '768px',
+  xmd: '980px',
 	lg: '1024px',
 	xl: '1280px',
 }
@@ -42,6 +44,7 @@ export const GlobalStyles = createGlobalStyle`
 --color-gray-400: hsl(0, 0%, 89%);
 --color-gray-500: hsl(0, 0%, 81%);
 --color-gray-600: hsl(0, 0%, 48%);
+--color-gray-600: hsl(0, 0%, 20%);
 --color-gray-700: hsl(0, 0%, 10%);
 --color-gray-800: hsl(0, 0%, 6%);
 
@@ -77,6 +80,8 @@ html {
 
 body {
 font-family: 'Manrope', sans-serif;
+position: relative;
+height: 2000px;
 }
 
 .page-container {
