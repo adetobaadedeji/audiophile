@@ -18,7 +18,7 @@ export const HeroContainer = styled.section`
 			height: 47rem;
 	`}
 
-	/* background-color: var(--color-gray-700); */
+	background-color: var(--color-gray-700);
 	color: var(--color-gray-200);
 `
 export const HeroContent = styled.div`

@@ -1,14 +1,17 @@
 import React from 'react'
 import PageContent from '../pageContent/PageContent'
 import { HeroContainer, HeroContent } from './HeroSection.styles'
-// import { homeData } from '../../utils/homeData'
+import { homeData } from '../../utils/homeData'
+import SectionContainer from '../sectionContainer/SectionContainer'
 
-const HeroSection = ({data}) => {
+const HeroSection = () => {
 	
   return (
-		<HeroContainer >
+		<HeroContainer>
 			<HeroContent>
-				<PageContent data={data}/>
+				<SectionContainer>
+					<PageContent data={homeData} />
+				</SectionContainer>
 			</HeroContent>
 		</HeroContainer>
 	)

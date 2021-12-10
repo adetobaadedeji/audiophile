@@ -11,7 +11,7 @@ import {
 	MenuHamburgerContainer,
 	MenuLink
 } from './Header.styles'
-import { links } from '../../utils/datas'
+import { links } from '../../utils/routeData'
 import MenuHamburger from '../menuHamburger/MenuHamburger'
 
 const Header = () => {

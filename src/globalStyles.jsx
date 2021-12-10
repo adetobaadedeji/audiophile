@@ -25,7 +25,7 @@ export const screenSize = Object.keys(breakpoints).reduce(
 
 export const GlobalStyles = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;700&display=swap'); */
 
 
 
@@ -43,8 +43,9 @@ export const GlobalStyles = createGlobalStyle`
 --color-gray-300: hsl(0, 0%, 90%);
 --color-gray-400: hsl(0, 0%, 89%);
 --color-gray-500: hsl(0, 0%, 81%);
---color-gray-600: hsl(0, 0%, 48%);
---color-gray-600: hsl(0, 0%, 20%);
+/* --color-gray-600: hsl(0, 0%, 78%); */
+/* --color-gray-600: hsl(0, 0%, 48%) */
+--color-gray-600: hsl(0, 0%, 40%);
 --color-gray-700: hsl(0, 0%, 10%);
 --color-gray-800: hsl(0, 0%, 6%);
 
@@ -80,14 +81,7 @@ html {
 
 body {
 font-family: 'Manrope', sans-serif;
-position: relative;
-height: 2000px;
-}
-
-.page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 23rem);
+min-height: 2000px;
 }
 
 `

@@ -11,6 +11,7 @@ export default SectionContainer
 const Section = styled.section`
 	width: 100%;
 	margin: 0 auto;
+	/* border: 2px solid red; */
 
 	${screenSize.lg`
 		width: 95%;

@@ -1,12 +1,12 @@
 import React from 'react'
 import HeroSection from '../../components/heroSection/HeroSection'
-import { homeData } from '../../utils/homeData'
+import CategorySection from '../../components/categorySection/CategorySection'
 
 const Homepage = () => {
 	return (
 		<div>
-			<HeroSection data={homeData}/>
-			<span style={{color: 'red', fontSize: '20px'}}>This is a span</span>
+			<HeroSection/>
+			<CategorySection/>
 		</div>
 	)
 }
