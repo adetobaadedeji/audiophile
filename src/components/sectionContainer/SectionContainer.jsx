@@ -2,6 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 import { screenSize } from '../../globalStyles'
 
+// const SectionContainer = (WrappedComponent) => {
+// 	return (props) => {
+// 		return (
+// 			<Section>
+// 				<WrappedComponent {...props}/>
+// 			</Section>
+// 		)
+// 	}
+// }
+// export default SectionContainer
+
 const SectionContainer = ({children}) => {
 	return <Section>{children}</Section>
 }

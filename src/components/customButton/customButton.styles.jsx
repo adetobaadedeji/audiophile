@@ -17,7 +17,6 @@ const blackButtonStyles = css`
 	color: var(--color-white);
 	border: none;
 `
-
 const getButtonStyles = (props) => {
 	if (props.isBlack) {
 		return blackButtonStyles
@@ -34,19 +33,17 @@ export const CustomButtonContainer = styled(Link)`
 	font-size: 1.125rem;
 	letter-spacing: 0.05rem;
 	font-weight: 600;
-	padding: 1.25rem 2.2rem;
+	padding: 1.1rem 2.2rem;
 	transition: var(--transition);
 	border-radius: 2px;
-	/* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07),
-		0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07),
-		0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07); */
 
 	${screenSize.md`
-			font-size: 1rem;
+		font-size: 1rem;
+		padding: ${({ inverted }) => (inverted ? '0.8rem 1.8rem' : '1.1rem 2.2rem')};
   `}
 
 	${screenSize.xmd`
-			font-size: 0.9rem;
-		padding: 1rem 2rem;
+		font-size: 0.9rem;
+		padding: ${({ inverted }) => (inverted ? '0.8rem 1.8rem' : '1rem 2rem')};
   `}
 `

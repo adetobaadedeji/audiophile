@@ -5,7 +5,7 @@ import PatternCircle from '../../assets/home/desktop/pattern-circles.svg'
 
 export const SpeakerContainer = styled.div`
 	width: 100%;
-	margin: 6rem auto;
+	margin: 5rem auto 0;
 	padding: 5rem 0;
 	min-height: 37.5rem;
 	background-color: var(--color-main-normal);
@@ -21,7 +21,7 @@ export const SpeakerContainer = styled.div`
 	overflow: hidden;
 
 	${screenSize.sm`
-    margin: 1rem auto;
+    margin: 1rem auto 0;
   `}
 	${screenSize.md`
 		background-size: 65rem auto;
@@ -29,7 +29,7 @@ export const SpeakerContainer = styled.div`
   `}
 
 	${screenSize.xmd`
-    margin: 3rem auto;
+    margin: 3rem auto 0;
     flex-direction: row;
 		padding:  0;
 		min-height: 33rem;
