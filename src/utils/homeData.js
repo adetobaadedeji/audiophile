@@ -15,11 +15,13 @@ export const homeData = {
 	},
 	sectionTwo: {
 		mainHeading: 'ZX9 speaker',
+		zx9: 'zx9',
 		description:
 			'Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.',
 		button: {
 			title: 'see product',
 			link: '/product/zx9-speaker',
+			black: 'isBlack',
 		},
 		image: {
 			mobile: zx9Mobile,
@@ -33,6 +35,7 @@ export const homeData = {
 		button: {
 			title: 'see product',
 			link: '/product/zx7-speaker',
+			inverted: 'inverted',
 		},
 	},
 	sectionFour: {
@@ -40,6 +43,7 @@ export const homeData = {
 		button: {
 			title: 'see product',
 			link: '/product/yx1-earphones',
+			inverted: 'inverted',
 		},
 	},
 }

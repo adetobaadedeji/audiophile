@@ -32,6 +32,7 @@ export const HeroContent = styled.div`
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	padding-top: 80px;
 
 	@media (min-width: 430px) {
 		background-position: 0px -1rem;
@@ -80,7 +81,7 @@ export const HeroContent = styled.div`
 		background-size: cover;
 		background-position: -16rem 0rem;
 	`}
-	
+
 	@media (min-width: 1000px) {
 		background-position: -14rem 0rem;
 	}
@@ -112,17 +113,17 @@ export const HeroContent = styled.div`
 	@media (min-width: 1150px) {
 		background-position: -9rem 0rem;
 	}
-	
+
 	@media (min-width: 1175px) {
 		background-position: -7rem 0rem;
 	}
 
 	@media (min-width: 1200px) {
-	background-position: -6rem 0rem;
+		background-position: -6rem 0rem;
 	}
-	
+
 	@media (min-width: 1205px) {
-	background-position: -5rem 0rem;
+		background-position: -5rem 0rem;
 	}
 
 	${screenSize.xl`
@@ -130,6 +131,6 @@ export const HeroContent = styled.div`
 	`};
 
 	@media (min-width: 1466px) {
-	background-position: 0rem 0rem;
+		background-position: 0rem 0rem;
 	}
 `

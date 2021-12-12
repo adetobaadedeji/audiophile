@@ -9,9 +9,12 @@ const SectionContainer = ({children}) => {
 export default SectionContainer
 
 const Section = styled.section`
-	width: 100%;
+	width: 87%;
 	margin: 0 auto;
-	/* border: 2px solid red; */
+
+	${screenSize.sm`
+		width: 90%;
+	`}
 
 	${screenSize.lg`
 		width: 95%;

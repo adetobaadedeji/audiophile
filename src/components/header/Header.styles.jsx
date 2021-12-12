@@ -33,7 +33,6 @@ export const HeaderContent = styled.div`
 
 	${screenSize.sm`
 		justify-content: flex-start;
-			padding: 0 40px;
 			
 		.first-child {
 			margin-right: 45px;
@@ -43,8 +42,11 @@ export const HeaderContent = styled.div`
 		}
 	`}
 	${screenSize.md`
+			padding: 0;
+	`}
+	${screenSize.xmd`
 		justify-content: space-between;
-		padding: 0;
+		
 		.last-child {
 			margin-left: 40px;
 		}
@@ -64,7 +66,7 @@ export const HeaderContent = styled.div`
 `
 
 export const MenuHamburgerContainer = styled.div`
-	${screenSize.md`
+	${screenSize.xmd`
 		display: none;
 	`}
 `
@@ -79,7 +81,7 @@ export const Image = styled.img``
 export const MenuContainer = styled.div`
 	display: none;
 
-	${screenSize.md`
+	${screenSize.xmd`
 		display: flex;
 		text-transform: uppercase;
 	`}

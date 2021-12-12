@@ -5,12 +5,17 @@ export const CategorySectionContainer = styled.div`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-  align-items: center;
-	gap: 20px;
+	align-items: center;
+	gap: 1rem;
 	padding: 50px 0;
 
-	${screenSize.xmd`
+	${screenSize.md`
     flex-direction: row;
+		padding: 5rem 0;
+		gap: 0.5rem;
   `}
 
+	${screenSize.xmd`
+		gap: 1.2rem;
+  `}
 `

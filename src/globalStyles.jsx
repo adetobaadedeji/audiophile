@@ -42,9 +42,9 @@ export const GlobalStyles = createGlobalStyle`
 --color-gray-200: hsl(0, 0%, 95%);
 --color-gray-300: hsl(0, 0%, 90%);
 --color-gray-400: hsl(0, 0%, 89%);
---color-gray-500: hsl(0, 0%, 81%);
-/* --color-gray-600: hsl(0, 0%, 78%); */
-/* --color-gray-600: hsl(0, 0%, 48%) */
+/* --color-gray-500: hsl(0, 0%, 81%); */
+--color-gray-500: hsl(0, 0%, 70%);
+/* --color-gray-600: hsl(0, 11.11111111111111%, 1.7647058823529411%) */
 --color-gray-600: hsl(0, 0%, 40%);
 --color-gray-700: hsl(0, 0%, 10%);
 --color-gray-800: hsl(0, 0%, 6%);
@@ -52,6 +52,9 @@ export const GlobalStyles = createGlobalStyle`
 //animaion 
  --transition: all 0.5s;
  --burger-transition: all 0.5s ease-out;
+
+ --radius: 8px;
+ --radius-2: 5px;
 }
 
 
@@ -81,7 +84,7 @@ html {
 
 body {
 font-family: 'Manrope', sans-serif;
-min-height: 2000px;
+min-height: 3000px;
 }
 
 `

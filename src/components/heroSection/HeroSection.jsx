@@ -5,12 +5,12 @@ import { homeData } from '../../utils/homeData'
 import SectionContainer from '../sectionContainer/SectionContainer'
 
 const HeroSection = () => {
-	
+	const { hero } = homeData
   return (
 		<HeroContainer>
 			<HeroContent>
 				<SectionContainer>
-					<PageContent data={homeData} />
+					<PageContent data={hero} />
 				</SectionContainer>
 			</HeroContent>
 		</HeroContainer>

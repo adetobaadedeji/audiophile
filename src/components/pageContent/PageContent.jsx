@@ -7,14 +7,20 @@ import {
 	MainHeading,
 } from './PageContent.styles'
 
-const PageContent = ({ data: { hero } }) => {
-	const { topHeading, mainHeading, description, button } = hero
+const PageContent = ({ data }) => {
+	const { topHeading, mainHeading, description, button, zx9 } = data
 	return (
 		<ContentContainer>
 			<TopHeading>{topHeading}</TopHeading>
-			<MainHeading>{mainHeading}</MainHeading>
-			<Description>{description}</Description>
-			<CustomButton>{button.title}</CustomButton>
+			<MainHeading zx9={zx9}>{mainHeading}</MainHeading>
+			<Description zx9={zx9}>{description}</Description>
+			<CustomButton
+				to={button.link}
+				isBlack={button.black}
+				inverted={button.inverted}
+			>
+				{button.title}
+			</CustomButton>
 		</ContentContainer>
 	)
 }
