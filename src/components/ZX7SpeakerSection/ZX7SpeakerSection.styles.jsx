@@ -33,7 +33,7 @@ export const SpeakerContainer = styled.div`
     margin: 2.2rem 0;
   `}
 	${screenSize.xmd`
-    min-height: 17rem;
+    min-height:19rem;
     background-size: cover;
     background-image: url(${zx7Desktop});
     gap: 1.2rem;

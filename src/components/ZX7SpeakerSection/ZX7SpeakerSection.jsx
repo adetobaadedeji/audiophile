@@ -1,6 +1,5 @@
 import React from 'react'
 import SectionContainer from '../sectionContainer/SectionContainer'
-// import PageContent from '../pageContent/PageContent'
 import { homeData } from '../../utils/homeData'
 import { SpeakerContainer, SpeakerHeading, ButtonContainer } from './ZX7SpeakerSection.styles'
 import CustomButton from '../customButton/CustomButton'

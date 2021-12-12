@@ -79,12 +79,11 @@ html {
      font-size: 100%;
   `}
 
-  
 }
 
 body {
 font-family: 'Manrope', sans-serif;
-min-height: 3000px;
+min-height: 4000px;
 }
 
 `
