@@ -38,9 +38,15 @@ export const MainHeading = styled.h1`
 	color: var(--color-gray-200);
 
 	${screenSize.md`
+		font-size: ${({ zx9 }) => (zx9 ? '3.5rem' : '3.9rem')};
+		line-height: ${({ zx9 }) => (zx9 ? '3.5rem' : '4rem')};
+		font-weight: 700;
+  `};
+
+	${screenSize.xmd`
 		font-size: ${({ zx9 }) => (zx9 ? '3rem' : '3.9rem')};
 		line-height: ${({ zx9 }) => (zx9 ? '3rem' : '4rem')};
-		font-weight: 700;
+		
   `};
 `
 export const Description = styled.p`

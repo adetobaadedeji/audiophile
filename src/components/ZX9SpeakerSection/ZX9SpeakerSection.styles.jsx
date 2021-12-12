@@ -11,8 +11,8 @@ export const SpeakerContainer = styled.div`
 	background-color: var(--color-main-normal);
 	background-image: url(${PatternCircle});
 	background-repeat: no-repeat;
-	background-size: 47rem auto;
-	background-position: center -10rem;
+	background-size: 48rem auto;
+	background-position: center -10.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -22,6 +22,10 @@ export const SpeakerContainer = styled.div`
 
 	${screenSize.sm`
     margin: 1rem auto;
+  `}
+	${screenSize.md`
+		background-size: 65rem auto;
+		background-position: center -19.5rem;
   `}
 
 	${screenSize.xmd`
