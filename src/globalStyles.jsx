@@ -83,7 +83,7 @@ html {
 
 body {
 font-family: 'Manrope', sans-serif;
-min-height: 4000px;
+min-height: 5000px;
 }
 
 `
