@@ -80,10 +80,10 @@ export const ContentHeading = styled.div`
   `}
 `
 export const ContentDescription = styled.div`
-	font-size: 1.3rem;
+	font-size: 1.2rem;
 	line-height: 2rem;
 	color: var(--color-gray-800);
-	font-weight: 400;
+	font-weight: 500;
 	opacity: 0.65;
 
 	${screenSize.xmd`
