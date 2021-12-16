@@ -2,7 +2,7 @@ import React from 'react'
 import SectionContainer from '../sectionContainer/SectionContainer'
 import { homeData } from '../../utils/homeData'
 import { SpeakerContainer, SpeakerHeading, ButtonContainer } from './ZX7SpeakerSection.styles'
-import CustomButton from '../custom-button/CustomButton.jsx'
+import CustomButton from '../custom-button/CustomButton'
 
 const ZX7SpeakerSection = () => {
 	const { sectionThree : {mainHeading, button} } = homeData

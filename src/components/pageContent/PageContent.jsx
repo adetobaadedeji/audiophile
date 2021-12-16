@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomButton from '../custom-button/CustomButton.jsx'
+import CustomButton from '../custom-button/CustomButton'
 import {
 	ContentContainer,
 	Description,
