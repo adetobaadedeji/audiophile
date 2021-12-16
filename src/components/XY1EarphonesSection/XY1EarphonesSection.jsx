@@ -20,7 +20,7 @@ const XY1EarphonesSection = () => {
 					<ContentContainer>
 						<EarphoneHeading>{mainHeading}</EarphoneHeading>
 						<ButtonContainer>
-							<CustomButton to={button.link} inverted={button.inverted}>
+							<CustomButton  inverted={button.inverted}>
 								{button.title}
 							</CustomButton>
 						</ButtonContainer>
@@ -32,3 +32,4 @@ const XY1EarphonesSection = () => {
 }
 
 export default XY1EarphonesSection
+

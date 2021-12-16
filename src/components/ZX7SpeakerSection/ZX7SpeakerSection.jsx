@@ -12,7 +12,7 @@ const ZX7SpeakerSection = () => {
 			<SpeakerContainer>
 				<SpeakerHeading>{mainHeading}</SpeakerHeading>
 				<ButtonContainer>
-					<CustomButton to={button.link} inverted={button.inverted}>
+					<CustomButton  inverted={button.inverted}>
 						{button.title}
 					</CustomButton>
 				</ButtonContainer>

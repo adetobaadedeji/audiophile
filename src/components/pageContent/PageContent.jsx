@@ -15,7 +15,7 @@ const PageContent = ({ data }) => {
 			<MainHeading zx9={zx9}>{mainHeading}</MainHeading>
 			<Description zx9={zx9}>{description}</Description>
 			<CustomButton
-				to={button.link}
+				// to={button.link}
 				black={button.black}
 				inverted={button.inverted}
 			>
