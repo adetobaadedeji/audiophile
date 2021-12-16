@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomButton from '../customButton/CustomButton'
+// import CustomButton from '../customButton/CustomButton'
 import {
 	ContentContainer,
 	Description,
@@ -14,13 +14,13 @@ const PageContent = ({ data }) => {
 			<TopHeading>{topHeading}</TopHeading>
 			<MainHeading zx9={zx9}>{mainHeading}</MainHeading>
 			<Description zx9={zx9}>{description}</Description>
-			<CustomButton
+			{/* <CustomButton
 				to={button.link}
 				black={button.black}
 				inverted={button.inverted}
-			>
+			> */}
 				{button.title}
-			</CustomButton>
+			{/* </CustomButton> */}
 		</ContentContainer>
 	)
 }
