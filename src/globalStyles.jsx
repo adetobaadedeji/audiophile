@@ -67,7 +67,9 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 html {
-  font-size: 81.25%;
+  /* font-size: 81.25%; */
+  font-size: 62.5%;
+
 
   ${screenSize.sm`
      font-size: 87.5%;

@@ -38,12 +38,12 @@ export const CustomButtonContainer = styled(Link)`
 	border-radius: 2px;
 
 	${screenSize.md`
-		font-size: 1rem;
+		// font-size: 1rem;
 		padding: ${({ inverted }) => (inverted ? '0.8rem 1.8rem' : '1.1rem 2.2rem')};
   `}
 
 	${screenSize.xmd`
-		font-size: 0.9rem;
+		// font-size: 0.9rem;
 		padding: ${({ inverted }) => (inverted ? '0.8rem 1.8rem' : '1rem 2rem')};
   `}
 `
