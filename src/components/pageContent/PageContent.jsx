@@ -16,7 +16,7 @@ const PageContent = ({ data }) => {
 			<Description zx9={zx9}>{description}</Description>
 			<CustomButton
 				to={button.link}
-				isBlack={button.black}
+				black={button.black}
 				inverted={button.inverted}
 			>
 				{button.title}

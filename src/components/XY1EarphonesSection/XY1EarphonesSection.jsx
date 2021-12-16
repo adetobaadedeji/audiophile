@@ -11,17 +11,17 @@ import {
 } from './XY1EarphonesSection.styles'
 
 const XY1EarphonesSection = () => {
-	const { sectionFour } = homeData
+	const { sectionFour: {mainHeading, button} } = homeData
 	return (
 		<div>
 			<SectionContainer>
 				<EarphoneContainer>
 					<ImageContainer></ImageContainer>
 					<ContentContainer>
-						<EarphoneHeading>{sectionFour.mainHeading}</EarphoneHeading>
+						<EarphoneHeading>{mainHeading}</EarphoneHeading>
 						<ButtonContainer>
-							<CustomButton to={sectionFour.button.link} inverted>
-								{sectionFour.button.title}
+							<CustomButton to={button.link} inverted={button.inverted}>
+								{button.title}
 							</CustomButton>
 						</ButtonContainer>
 					</ContentContainer>

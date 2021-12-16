@@ -21,7 +21,7 @@ export const homeData = {
 		button: {
 			title: 'see product',
 			link: '/product/zx9-speaker',
-			black: 'isBlack',
+			black: 'black',
 		},
 		image: {
 			mobile: zx9Mobile,

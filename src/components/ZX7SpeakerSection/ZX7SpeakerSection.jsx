@@ -5,15 +5,15 @@ import { SpeakerContainer, SpeakerHeading, ButtonContainer } from './ZX7SpeakerS
 import CustomButton from '../customButton/CustomButton'
 
 const ZX7SpeakerSection = () => {
-	const { sectionThree } = homeData
+	const { sectionThree : {mainHeading, button} } = homeData
 
 	return (
 		<SectionContainer>
 			<SpeakerContainer>
-				<SpeakerHeading>{sectionThree.mainHeading}</SpeakerHeading>
+				<SpeakerHeading>{mainHeading}</SpeakerHeading>
 				<ButtonContainer>
-					<CustomButton to={sectionThree.button.link} inverted>
-						{sectionThree.button.title}
+					<CustomButton to={button.link} inverted={button.inverted}>
+						{button.title}
 					</CustomButton>
 				</ButtonContainer>
 			</SpeakerContainer>

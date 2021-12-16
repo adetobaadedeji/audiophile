@@ -18,7 +18,7 @@ const blackButtonStyles = css`
 	border: none;
 `
 const getButtonStyles = (props) => {
-	if (props.isBlack) {
+	if (props.black) {
 		return blackButtonStyles
 	}
 
