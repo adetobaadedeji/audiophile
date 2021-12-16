@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { screenSize } from '../../globalStyles'
 
 const buttonStyles = css`
@@ -25,7 +25,7 @@ const getButtonStyles = (props) => {
 	return props.inverted ? invertedButtonStyles : buttonStyles
 }
 
-export const CustomButtonContainer = styled.button`
+export const CustomButtonContainer = styled(Link)`
 	cursor: pointer;
 	${getButtonStyles}
 	text-transform: uppercase;

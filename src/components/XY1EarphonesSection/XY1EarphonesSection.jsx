@@ -1,7 +1,7 @@
 import React from 'react'
 import SectionContainer from '../sectionContainer/SectionContainer'
 import { homeData } from '../../utils/homeData'
-import CustomButton from '../customButton/CustomButton'
+import CustomButton from '../custom-button/CustomButton.jsx'
 import {
 	ButtonContainer,
 	ContentContainer,
@@ -20,7 +20,7 @@ const XY1EarphonesSection = () => {
 					<ContentContainer>
 						<EarphoneHeading>{mainHeading}</EarphoneHeading>
 						<ButtonContainer>
-							<CustomButton  inverted={button.inverted}>
+							<CustomButton to={button.link} inverted={button.inverted}>
 								{button.title}
 							</CustomButton>
 						</ButtonContainer>
