@@ -2,7 +2,7 @@ import React from 'react'
 import SectionContainer from '../sectionContainer/SectionContainer'
 import { homeData } from '../../utils/homeData'
 import { SpeakerContainer, SpeakerHeading, ButtonContainer } from './ZX7SpeakerSection.styles'
-import CustomButton from '../customButton/CustomButton'
+// import CustomButton from '../customButton/CustomButton'
 
 const ZX7SpeakerSection = () => {
 	const { sectionThree : {mainHeading, button} } = homeData
@@ -12,9 +12,9 @@ const ZX7SpeakerSection = () => {
 			<SpeakerContainer>
 				<SpeakerHeading>{mainHeading}</SpeakerHeading>
 				<ButtonContainer>
-					<CustomButton to={button.link} inverted={button.inverted}>
+					{/* <CustomButton to={button.link} inverted={button.inverted}> */}
 						{button.title}
-					</CustomButton>
+					{/* </CustomButton> */}
 				</ButtonContainer>
 			</SpeakerContainer>
 		</SectionContainer>
