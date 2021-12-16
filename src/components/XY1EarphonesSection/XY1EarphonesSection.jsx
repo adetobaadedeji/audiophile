@@ -1,7 +1,7 @@
 import React from 'react'
 import SectionContainer from '../sectionContainer/SectionContainer'
 import { homeData } from '../../utils/homeData'
-import CustomButton from '../custom-button/CustomButton.jsx'
+import CustomButton from '../custom-button/CustomButton'
 import {
 	ButtonContainer,
 	ContentContainer,
