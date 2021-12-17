@@ -64,7 +64,7 @@ export const LogoContainer = styled.div``
 export const Image = styled.img``
 
 export const FooterMenuContainer = styled.div`
-	gap: 2.5rem;
+	gap: 3rem;
 
 	${screenSize.md`
 		flex-direction: row;
@@ -106,7 +106,7 @@ export const FooterDescription = styled.p`
 	color: var(--color-gray-500);
 	font-size: 1.5rem;
 	line-height: 2.3rem;
-	font-weight: 500;
+	font-weight: 400;
 
 	${screenSize.md`
 		text-align: justify;
@@ -168,7 +168,7 @@ export const CopyrightContainer = styled.p`
 	color: var(--color-gray-500);
 	font-size: 1.5rem;
 	line-height: 1.9rem;
-	font-weight: 600;
+	font-weight: 500;
 
 	${screenSize.md`
 		font-size: 1.05rem;

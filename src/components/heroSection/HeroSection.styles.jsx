@@ -6,8 +6,7 @@ import desktopBackground from '../../assets/home/desktop/image-hero.jpg'
 
 export const HeroContainer = styled.section`
 	width: 100%;
-	/* height: 51rem; */
-	height: 56rem;
+	height: 58rem;
 
 	${screenSize.sm`
 		height: 51rem;
@@ -35,7 +34,6 @@ export const HeroContent = styled.div`
 	justify-content: center;
 	background-image: url(${mobileBackground});
 	background-repeat: no-repeat;
-	/* background-size: cover; */
 	background-size: 100%;
 	background-position: center ;
 	padding-top: 80px;
