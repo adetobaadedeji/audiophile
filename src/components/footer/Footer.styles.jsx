@@ -64,7 +64,7 @@ export const LogoContainer = styled.div``
 export const Image = styled.img``
 
 export const FooterMenuContainer = styled.div`
-	gap: 2rem;
+	gap: 2.5rem;
 
 	${screenSize.md`
 		flex-direction: row;
@@ -77,7 +77,7 @@ export const MenuLink = styled(NavLink)`
 	text-decoration: none;
 	text-transform: uppercase;
 	color: var(--color-gray-200);
-	font-size: 1rem;
+	font-size: 1.3rem;
 	font-weight: 700;
 	line-height: 1.5625rem;
 	letter-spacing: 0.1rem;
@@ -104,8 +104,8 @@ export const FooterDescription = styled.p`
 	width: 100%;
 	text-align: center;
 	color: var(--color-gray-500);
-	font-size: 1.25rem;
-	line-height: 1.9rem;
+	font-size: 1.5rem;
+	line-height: 2.3rem;
 	font-weight: 500;
 
 	${screenSize.md`
@@ -166,7 +166,7 @@ export const CopyrightContainer = styled.p`
 	width: 100%;
 	text-align: center;
 	color: var(--color-gray-500);
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	line-height: 1.9rem;
 	font-weight: 600;
 

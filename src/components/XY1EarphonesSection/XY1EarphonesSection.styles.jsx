@@ -61,7 +61,7 @@ export const ContentContainer = styled.div`
 
 export const EarphoneHeading = styled.h2`
 	text-transform: uppercase;
-	font-size: 2.5rem;
+	font-size: 2.8rem;
 	line-height: 3rem;
 	letter-spacing: 0.08rem;
 

@@ -5,7 +5,7 @@ import zx7Tablet from '../../assets/home/tablet/image-speaker-zx7.jpg'
 import zx7Desktop from '../../assets/home/desktop/image-speaker-zx7.jpg'
 
 export const SpeakerContainer = styled.div`
-	min-height: 27rem;
+	min-height: 30rem;
 	background-color: var(--color-gray-300);
 	background-image: url(${zx7Mobile});
 	background-repeat: no-repeat;
@@ -42,7 +42,7 @@ export const SpeakerContainer = styled.div`
 `
 export const SpeakerHeading = styled.h2`
 	text-transform: uppercase;
-	font-size: 2.5rem;
+	font-size: 2.8rem;
 	line-height: 3rem;
 	letter-spacing: 0.08rem;
 

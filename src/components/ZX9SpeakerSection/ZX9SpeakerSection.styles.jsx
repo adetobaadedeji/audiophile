@@ -6,13 +6,13 @@ import PatternCircle from '../../assets/home/desktop/pattern-circles.svg'
 export const SpeakerContainer = styled.div`
 	width: 100%;
 	margin: 5rem auto 0;
-	padding: 5rem 0;
+	padding: 5rem 2rem;
 	min-height: 37.5rem;
 	background-color: var(--color-main-normal);
 	background-image: url(${PatternCircle});
 	background-repeat: no-repeat;
-	background-size: 48rem auto;
-	background-position: center -10.5rem;
+	background-size: 54rem auto;
+	background-position: center -11.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

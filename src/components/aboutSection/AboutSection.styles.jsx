@@ -23,7 +23,7 @@ export const AboutSectionContainer = styled.div`
 `
 export const ImageContainer = styled.div`
 	width: 100%;
-	min-height: 26rem;
+	min-height: 30rem;
 	background-image: url(${aboutImageMobile});
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -60,13 +60,16 @@ export const ContentContainer = styled.div`
 `
 export const ContentHeading = styled.div`
 	text-transform: uppercase;
-	font-size: 2.5rem;
+	font-size: 2.8rem;
 	letter-spacing: 0.1rem;
 	font-weight: 600;
 	margin: 3.5rem auto 3rem;
-
+	/* max-width: 95%; */
 	span {
 		color: var(--color-main-normal);
+	}
+	@media (min-width: 411px) {
+		max-width: 85%;
 	}
 	${screenSize.sm`
     max-width: 70%;
@@ -80,8 +83,8 @@ export const ContentHeading = styled.div`
   `}
 `
 export const ContentDescription = styled.div`
-	font-size: 1.2rem;
-	line-height: 2rem;
+	font-size: 1.5rem;
+	line-height: 2.3rem;
 	color: var(--color-gray-800);
 	font-weight: 500;
 	opacity: 0.65;

@@ -30,20 +30,19 @@ export const CustomButtonContainer = styled(Link)`
 	${getButtonStyles}
 	text-transform: uppercase;
 	text-decoration: none;
-	font-size: 1.125rem;
-	letter-spacing: 0.05rem;
+	font-size: 1.3rem;
+	letter-spacing: 0.1rem;
 	font-weight: 600;
-	padding: 1.1rem 2.2rem;
+	padding: 1.4rem 2.4rem;
 	transition: var(--transition);
-	border-radius: 2px;
 
 	${screenSize.md`
-		// font-size: 1rem;
+		font-size: 1rem;
 		padding: ${({ inverted }) => (inverted ? '0.8rem 1.8rem' : '1.1rem 2.2rem')};
   `}
 
 	${screenSize.xmd`
-		// font-size: 0.9rem;
+		font-size: 0.9rem;
 		padding: ${({ inverted }) => (inverted ? '0.8rem 1.8rem' : '1rem 2rem')};
   `}
 `

@@ -6,14 +6,19 @@ import desktopBackground from '../../assets/home/desktop/image-hero.jpg'
 
 export const HeroContainer = styled.section`
 	width: 100%;
-	height: 51rem;
+	/* height: 51rem; */
+	height: 56rem;
 
-// Do not touch or adjust
+	${screenSize.sm`
+		height: 51rem;
+	`}
+
+	// Do not touch or adjust
 	${screenSize.md`
 		height: 49rem;
 	`}
 
-// Do not touch too
+	// Do not touch too
 	${screenSize.xmd`
 			height: 47rem;
 	`}
@@ -30,11 +35,13 @@ export const HeroContent = styled.div`
 	justify-content: center;
 	background-image: url(${mobileBackground});
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	/* background-size: cover; */
+	background-size: 100%;
+	background-position: center ;
 	padding-top: 80px;
 
 	@media (min-width: 430px) {
+		background-size: cover;
 		background-position: 0px -1rem;
 	}
 
@@ -47,15 +54,20 @@ export const HeroContent = styled.div`
 	}
 
 	@media (min-width: 440px) {
-		background-position: 0px -4rem;
+		background-position: 0px -7rem;
 	}
 
-	@media (min-width: 445px) {
+	@media (min-width: 479px) {
 		background-position: 0px -5rem;
+	}
+
+	@media (min-width: 481px) {
+		background-position: 0px -2rem;
 	}
 
 	@media (min-width: 500px) {
 		background-image: url(${tabletBackground});
+		background-size: cover;
 		background-position: center;
 	}
 

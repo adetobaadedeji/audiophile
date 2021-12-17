@@ -19,7 +19,7 @@ export const CategoryContainer = styled.div`
 
 export const CategoryWrapper = styled.div`
 	width: 100%;
-	height: 13.25rem;
+	min-height: 16rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -68,7 +68,7 @@ export const CategoryImage = styled.img`
 
 export const CategoryHeader = styled.h2`
 	text-transform: uppercase;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	letter-spacing: 0.1rem;
 	margin: 15px 0;
 	${screenSize.md`
@@ -83,7 +83,7 @@ export const ButtonLink = styled(Link)`
 	margin: 0 auto;
 	padding: 1px 0;
 	color: var(--color-gray-600);
-	font-size: 1rem;
+	font-size: 1.3rem;
 	font-weight: 700;
 	text-transform: uppercase;
 	text-decoration: none;
