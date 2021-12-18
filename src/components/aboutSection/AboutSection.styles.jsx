@@ -72,7 +72,8 @@ export const ContentHeading = styled.div`
 		max-width: 85%;
 	}
 	${screenSize.sm`
-    max-width: 70%;
+    max-width: 60%;
+		font-size: 2.4rem;
   `}
 	${screenSize.xmd`
 		max-width: 75%;
@@ -88,6 +89,10 @@ export const ContentDescription = styled.div`
 	color: var(--color-gray-800);
 	font-weight: 500;
 	opacity: 0.65;
+
+	${screenSize.sm`
+		font-size: 1.25rem;
+  `}
 
 	${screenSize.xmd`
   font-size: 0.95rem;

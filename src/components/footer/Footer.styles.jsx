@@ -91,6 +91,11 @@ export const MenuLink = styled(NavLink)`
 		transition: var(--transition);
 		color: var(--color-main-normal);
 	}
+
+	${screenSize.sm`
+
+		font-size: 1.1rem;
+  `}
 	${screenSize.md`
 		font-size: 0.95rem;
 	`}
@@ -108,6 +113,9 @@ export const FooterDescription = styled.p`
 	line-height: 2.3rem;
 	font-weight: 400;
 
+	${screenSize.sm`
+		font-size: 1.2rem;
+  `}
 	${screenSize.md`
 		text-align: justify;
 		font-size: 1rem;
@@ -115,7 +123,7 @@ export const FooterDescription = styled.p`
 
 	${screenSize.xmd`
 		max-width: 50%;
-		font-size: 0.85rem;
+		font-size: 0.9rem;
 		line-height: 1.35rem;
 		text-align: left;
 	`}
@@ -170,11 +178,14 @@ export const CopyrightContainer = styled.p`
 	line-height: 1.9rem;
 	font-weight: 500;
 
+	${screenSize.sm`
+		font-size: 1.2rem;
+  `}
 	${screenSize.md`
 		font-size: 1.05rem;
 	`}
 	${screenSize.xmd`
-		font-size: 0.86rem;
+		font-size: 0.9rem;
 	`}
 	${screenSize.xl`
 		font-size: 0.95rem;

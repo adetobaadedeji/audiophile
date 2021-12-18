@@ -24,6 +24,10 @@ export const TopHeading = styled.h6`
 	letter-spacing: 0.625rem;
 	font-weight: 300;
 	color: var(--color-gray-500);
+
+	${screenSize.sm`
+		font-size: 1.2rem;
+  `}
 	${screenSize.md`
 		font-size: 1.1rem;
 		letter-spacing: 0.6rem;
@@ -37,6 +41,11 @@ export const MainHeading = styled.h1`
 	line-height: 3.6rem;
 	font-weight: 600;
 	color: var(--color-gray-200);
+
+	${screenSize.sm`
+		font-size: 3.5rem;
+		
+  `}
 
 	${screenSize.md`
 		font-size: ${({ zx9 }) => (zx9 ? '3.5rem' : '3.9rem')};
@@ -59,6 +68,11 @@ export const Description = styled.p`
 		zx9 ? 'var(--color-gray-400)' : 'var(--color-gray-500)'};
 	letter-spacing: 0.02rem;
 	font-weight: 400;
+
+	${screenSize.sm`
+		font-size: 1.2rem;
+		line-height: 2.2rem;
+  `}
 
 	${screenSize.md`
 		max-width: 26rem;

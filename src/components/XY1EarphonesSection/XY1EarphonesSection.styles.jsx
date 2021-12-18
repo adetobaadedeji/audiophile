@@ -65,6 +65,10 @@ export const EarphoneHeading = styled.h2`
 	line-height: 3rem;
 	letter-spacing: 0.08rem;
 
+	${screenSize.sm`
+		font-size: 2.4rem;
+  `}
+
 	${screenSize.md`
     font-size: 2rem;
   `}
