@@ -12,7 +12,7 @@ export const HeaderContainer = styled.section`
 	left: 0;
 	right: 0;
 	z-index: 2000;
-	
+
 	${screenSize.md`
 		height: 5.5rem;
 		padding: 0 40px;

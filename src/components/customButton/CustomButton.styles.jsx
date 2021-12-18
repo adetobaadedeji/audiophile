@@ -42,8 +42,8 @@ export const CustomButtonContainer = styled(Link)`
   `}
 
 	${screenSize.md`
-		font-size: 1rem;
-		padding: ${({ inverted }) => (inverted ? '0.8rem 1.8rem' : '1.1rem 2.2rem')};
+		font-size: 0.95rem;
+		padding: ${({ inverted }) => (inverted ? '0.8rem 1.8rem' : '1rem 2rem')};
   `}
 
 	${screenSize.xmd`

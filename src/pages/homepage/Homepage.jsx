@@ -5,17 +5,18 @@ import ZX9SpeakerSection from '../../components/ZX9SpeakerSection/ZX9SpeakerSect
 import ZX7SpeakerSection from '../../components/ZX7SpeakerSection/ZX7SpeakerSection'
 import XY1EarphonesSection from '../../components/XY1EarphonesSection/XY1EarphonesSection'
 import AboutSection from '../../components/aboutSection/AboutSection'
+import { HomepageContainer } from './Homepage.styles'
 
 const Homepage = () => {
 	return (
-		<div>
+		<HomepageContainer>
 			<HeroSection />
 			<CategorySection />
 			<ZX9SpeakerSection />
 			<ZX7SpeakerSection />
 			<XY1EarphonesSection />
 			<AboutSection />
-		</div>
+		</HomepageContainer>
 	)
 }
 

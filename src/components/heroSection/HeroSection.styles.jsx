@@ -5,6 +5,7 @@ import tabletBackground from '../../assets/home/tablet/image-header.jpg'
 import desktopBackground from '../../assets/home/desktop/image-hero.jpg'
 
 export const HeroContainer = styled.section`
+	margin-top: -6.9rem;
 	width: 100%;
 	height: 58rem;
 
@@ -14,6 +15,7 @@ export const HeroContainer = styled.section`
 
 	// Do not touch or adjust
 	${screenSize.md`
+		margin-top: -5.3rem;
 		height: 49rem;
 	`}
 

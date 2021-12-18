@@ -18,8 +18,7 @@ export const ContentContainer = styled.div`
 
 export const TopHeading = styled.h6`
 	text-transform: uppercase;
-	/* font-size: 1.3rem; */
-	font-size: 1.6rem;
+	font-size: 1.4rem;
 	line-height: 1.5625rem;
 	letter-spacing: 0.625rem;
 	font-weight: 300;
@@ -32,11 +31,15 @@ export const TopHeading = styled.h6`
 		font-size: 1.1rem;
 		letter-spacing: 0.6rem;
   `}
+	${screenSize.md`
+		font-size: 1rem;
+		letter-spacing: 0.6rem;
+  `}
 `
 export const MainHeading = styled.h1`
 	text-transform: uppercase;
 	max-width: ${({ zx9 }) => (zx9 ? '15rem' : '25rem')};
-	margin: 1.5rem 0rem;
+	margin: 2rem 0rem;
 	font-size: 3.9rem;
 	line-height: 3.6rem;
 	font-weight: 600;
@@ -44,17 +47,18 @@ export const MainHeading = styled.h1`
 
 	${screenSize.sm`
 		font-size: 3.5rem;
+	margin: 1.5rem 0rem;
 		
   `}
 
 	${screenSize.md`
-		font-size: ${({ zx9 }) => (zx9 ? '3.5rem' : '3.9rem')};
+		font-size: ${({ zx9 }) => (zx9 ? '3.5rem' : '3.7rem')};
 		line-height: ${({ zx9 }) => (zx9 ? '3.5rem' : '4rem')};
 		font-weight: 700;
   `};
 
 	${screenSize.xmd`
-		font-size: ${({ zx9 }) => (zx9 ? '3rem' : '3.9rem')};
+		font-size: ${({ zx9 }) => (zx9 ? '3rem' : '3.8rem')};
 		line-height: ${({ zx9 }) => (zx9 ? '3rem' : '4rem')};
 		
   `};
@@ -85,4 +89,5 @@ export const Description = styled.p`
 		font-size: 1rem;
 		line-height: 2rem;
   `}
+	
 `
