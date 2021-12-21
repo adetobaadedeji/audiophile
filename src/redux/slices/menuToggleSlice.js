@@ -7,7 +7,8 @@ export const menuToggleSlice = createSlice({
 	},
 	reducers: {
 		toggleMenu: (state, action) => {
-			state.toggleState = action.payload
+			// state.toggleState = action.payload
+			state.toggleState = !state.toggleState
 		},
 	},
 })

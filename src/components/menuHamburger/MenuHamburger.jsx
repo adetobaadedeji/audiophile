@@ -8,7 +8,9 @@ const MenuHamburger = () => {
 	const dispatch = useDispatch()
 
 	const handleMenuToggle = () => {
-		dispatch(toggleMenu(!toggleState))
+		// dispatch(toggleMenu(!toggleState))
+		dispatch(toggleMenu())
+
 	}
 
 	return (

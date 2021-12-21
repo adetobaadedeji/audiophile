@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
+import Sidebar from './components/sidebar/Sidebar'
 import ScrollToTop from './components/scrollToTop/ScrollToTop'
 import { GlobalStyles } from './globalStyles'
 import EarphonesPage from './pages/earphones/EarphonesPage'
@@ -29,7 +30,7 @@ const routes = [
 		component: EarphonesPage,
 	},
 	{
-		path: '/product/:id',
+		path: '/product/:productId',
 		component: ProductPage,
 	},
 ]
@@ -40,6 +41,7 @@ function App() {
 			<ScrollToTop />
 			<GlobalStyles />
 			<Header />
+			<Sidebar />
 			<Switch>
 				{routes.map((route, index) => (
 					<Route
