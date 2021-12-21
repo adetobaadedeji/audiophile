@@ -26,7 +26,7 @@ export const HeaderContent = styled.div`
 	height: 100%;
 	padding: 0 20px;
 	margin: 0 auto;
-	border-bottom: 2px solid var(--color-gray-600);
+	border-bottom: 2px solid var(--color-gray-650);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

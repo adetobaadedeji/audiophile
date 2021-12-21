@@ -46,6 +46,8 @@ export const GlobalStyles = createGlobalStyle`
 --color-gray-500: hsl(0, 0%, 70%);
 /* --color-gray-600: hsl(0, 11.11111111111111%, 1.7647058823529411%) */
 --color-gray-600: hsl(0, 0%, 40%);
+--color-gray-650: hsl(0, 0%, 20%);
+
 --color-gray-700: hsl(0, 0%, 10%);
 --color-gray-800: hsl(0, 0%, 6%);
 

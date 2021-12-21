@@ -27,7 +27,7 @@ const Header = () => {
 					</LogoContainer>
 					<MenuContainer>
 						{links.map(({ id, text, url }) => (
-							<MenuLink key={id} to={url} activeClassName='active'>
+							<MenuLink exact key={id} to={url} activeClassName='active'>
 								{text}
 							</MenuLink>
 						))}
