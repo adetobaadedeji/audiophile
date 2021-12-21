@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { screenSize } from '../../globalStyles'
-// import ManWithEarphone from '../../assets/shared/man-headerphone.png'
 import aboutImageMobile from '../../assets/shared/mobile/image-best-gear.jpg'
 import aboutImageTablet from '../../assets/shared/tablet/image-best-gear.jpg'
 import aboutImageDesktop from '../../assets/shared/desktop/image-best-gear.jpg'
@@ -17,9 +16,19 @@ export const AboutSectionContainer = styled.div`
 
 	${screenSize.xmd`
 		flex-direction: row-reverse;
-    // gap: 2rem;
     justify-content: space-between;
   `}
+
+	& > * {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		${screenSize.xmd`
+		align-items: start;
+  `}
+	}
 `
 export const ImageContainer = styled.div`
 	width: 100%;
@@ -64,7 +73,6 @@ export const ContentHeading = styled.div`
 	letter-spacing: 0.1rem;
 	font-weight: 600;
 	margin: 3.5rem auto 3rem;
-	/* max-width: 95%; */
 	span {
 		color: var(--color-main-normal);
 	}
@@ -72,8 +80,13 @@ export const ContentHeading = styled.div`
 		max-width: 85%;
 	}
 	${screenSize.sm`
-    max-width: 60%;
+    max-width: 75%;
 		font-size: 2.4rem;
+		line-height: 2.6rem;
+  `}
+	${screenSize.md`
+    max-width: 70%;
+		line-height: 2.6rem;
   `}
 	${screenSize.xmd`
 		max-width: 80%;
@@ -87,16 +100,23 @@ export const ContentDescription = styled.div`
 	font-size: 1.5rem;
 	line-height: 2.3rem;
 	color: var(--color-gray-800);
-	font-weight: 500;
+	font-weight: 400;
 	opacity: 0.65;
 
 	${screenSize.sm`
-		font-size: 1.25rem;
+		font-size: 1.2rem;
+		line-height: 1.8rem;
+  `}
+
+	${screenSize.md`
+		font-size: 1.1rem;
+		max-width: 90%;
   `}
 
 	${screenSize.xmd`
-  font-size: 0.95rem;
-	line-height: 1.5rem;
-  max-width: 81%;
+		font-size: 0.95rem;
+		line-height: 1.5rem;
+		font-weight: 500;
+		max-width: 81%;
   `}
 `

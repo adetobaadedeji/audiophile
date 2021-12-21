@@ -49,7 +49,6 @@ export const ImageContainer = styled.div`
 `
 export const Image = styled.img`
 	width: 100%;
-	/* height: 12rem; */
 `
 export const ProductPreviewContent = styled.div`
 	gap: 2rem;
@@ -57,10 +56,6 @@ export const ProductPreviewContent = styled.div`
 	${screenSize.md`
     gap: 1.5rem;
 	`}
-
-	/* ${screenSize.xmd`
-    gap: 1.5rem;
-	`} */
 `
 
 export const TopHeading = styled.h6`
@@ -97,11 +92,15 @@ export const MainHeading = styled.h1`
 
 	${screenSize.sm`
 		font-size: 2.75rem;
-   line-height: 2.5rem;	
+		line-height: 2.8rem;	
+		max-width: 60%;
+
   `}
 
 	${screenSize.md`
     font-size: 2.5rem;
+		line-height: 2.5rem;	
+
     max-width: 45%;
   `};
 
@@ -116,7 +115,6 @@ export const Description = styled.p`
 	font-size: 1.5rem;
 	line-height: 2.4rem;
 	text-align: center;
-	/* max-width: 27rem; */
 	margin: 0 0 10px;
 	color: var(--color-gray-800);
 	opacity: 0.65;
@@ -132,7 +130,6 @@ export const Description = styled.p`
 	${screenSize.md`
 		max-width: 26rem;
 		font-size: 1.1rem;
-    font-weight: 500;
   `}
 
 	${screenSize.xmd`
@@ -140,5 +137,6 @@ export const Description = styled.p`
 		font-size: 0.95rem;
 		line-height: 1.5rem;
     text-align: left;
+		font-weight: 500;
   `}
 `
