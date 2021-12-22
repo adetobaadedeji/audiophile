@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { screenSize } from '../../globalStyles'
 
 const defaultStyles = css`
@@ -60,7 +60,7 @@ export const FooterNav = styled.div`
 		${defaultStyles}
 	}
 `
-export const LogoContainer = styled.div``
+export const LogoContainer = styled.Link``
 export const Image = styled.img``
 
 export const FooterMenuContainer = styled.div`

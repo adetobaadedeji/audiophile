@@ -7,12 +7,13 @@ import { CopyrightContainer, FooterBottom, FooterContainer, FooterContent, Foote
 
 const Footer = () => {
 	const { footer, socials } = categoryData
+	
 	return (
 		<FooterContainer>
 			<SectionContainer>
 				<FooterContent>
 					<FooterNav>
-						<LogoContainer>
+						<LogoContainer to='/' onClick={() => window.scrollTo(0, 0)}>
 							<Image src={logo} alt='audiphile logo' />
 						</LogoContainer>
 						<FooterMenuContainer>
@@ -34,6 +35,7 @@ const Footer = () => {
 									key={index}
 									href={social.link}
 									arial-label={social.label}
+									onClick={() => window.scrollTo(0, 0)}
 								>
 									{social.icon}
 								</SocialLink>
