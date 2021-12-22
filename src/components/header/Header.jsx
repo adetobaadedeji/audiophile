@@ -1,4 +1,9 @@
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import {
+	toggleMenu,
+	toggleStateSelector,
+} from '../../redux/slices/menuToggleSlice'
 import logo from '../../assets/shared/desktop/logo.svg'
 import icon_cart from '../../assets/shared/desktop/icon-cart.svg'
 import {
@@ -15,6 +20,15 @@ import { links } from '../../utils/routeData'
 import MenuHamburger from '../menuHamburger/MenuHamburger'
 
 const Header = () => {
+		const toggleState = useSelector(toggleStateSelector)
+		const dispatch = useDispatch()
+
+		const handleToggle = () => {
+			if (toggleState) {
+				dispatch(toggleMenu())
+			}
+		}
+
 	return (
 		<div>
 			<HeaderContainer>
@@ -22,7 +36,7 @@ const Header = () => {
 					<MenuHamburgerContainer className='first-child'>
 						<MenuHamburger />
 					</MenuHamburgerContainer>
-					<LogoContainer>
+					<LogoContainer to='/' onClick={handleToggle}>
 						<Image src={logo} alt='audiphile logo' />
 					</LogoContainer>
 					<MenuContainer>

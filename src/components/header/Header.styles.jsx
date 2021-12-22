@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import { screenSize } from '../../globalStyles'
 
 export const HeaderContainer = styled.section`
@@ -70,7 +70,7 @@ export const MenuHamburgerContainer = styled.div`
 		display: none;
 	`}
 `
-export const LogoContainer = styled.div`
+export const LogoContainer = styled(Link)`
 	display: flex;
 	${screenSize.md`
 		margin-right: 30px;
