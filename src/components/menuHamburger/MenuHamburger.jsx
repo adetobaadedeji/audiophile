@@ -1,6 +1,9 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { toggleMenu, toggleStateSelector } from '../../redux/slices/menuToggleSlice'
+import {
+	toggleMenu,
+	toggleStateSelector,
+} from '../../redux/slices/menuToggleSlice'
 import { HambugerContainer, Hamburger } from './MenuHamburger.styles'
 
 const MenuHamburger = () => {
@@ -11,6 +14,10 @@ const MenuHamburger = () => {
 		// dispatch(toggleMenu(!toggleState))
 		dispatch(toggleMenu())
 
+		// scroll back to top if the Hambuger is closed
+		// if (toggleState) {
+		// 	window.scrollTo(0, 0)
+		// }
 	}
 
 	return (
