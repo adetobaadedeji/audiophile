@@ -18,7 +18,14 @@ const Footer = () => {
 						</LogoContainer>
 						<FooterMenuContainer>
 							{links.map(({ id, text, url }) => (
-								<MenuLink exact key={id} to={url} activeClassName='active'>
+								<MenuLink
+									exact
+									key={id}
+									to={url}
+									activeClassName='active'
+									//if the location does not change, this function will sroll the page up on clicking the Link
+									onClick={() => window.scrollTo(0, 0)}
+								>
 									{text}
 								</MenuLink>
 							))}
@@ -35,7 +42,6 @@ const Footer = () => {
 									key={index}
 									href={social.link}
 									arial-label={social.label}
-									onClick={() => window.scrollTo(0, 0)}
 								>
 									{social.icon}
 								</SocialLink>

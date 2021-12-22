@@ -60,7 +60,7 @@ export const FooterNav = styled.div`
 		${defaultStyles}
 	}
 `
-export const LogoContainer = styled.Link``
+export const LogoContainer = styled(Link)``
 export const Image = styled.img``
 
 export const FooterMenuContainer = styled.div`

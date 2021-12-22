@@ -21,7 +21,11 @@ export const SidebarContainer = styled.aside`
 	z-index: 999;
 	overflow: auto;
 	border-radius: 0 0 10px 10px;
-	max-height: 65rem;
+	max-height: 58rem;
+
+	@media (min-width: 360px) {
+		max-height: 65rem;
+	}
 
 	${screenSize.md`
     max-height: 18rem;
