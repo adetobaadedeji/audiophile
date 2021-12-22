@@ -26,6 +26,7 @@ const Header = () => {
 		const handleToggle = () => {
 			if (toggleState) {
 				dispatch(toggleMenu())
+				window.scrollTo(0, 0)
 			}
 		}
 

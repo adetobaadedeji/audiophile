@@ -15,9 +15,9 @@ const MenuHamburger = () => {
 		dispatch(toggleMenu())
 
 		// scroll back to top if the Hambuger is closed
-		// if (toggleState) {
-		// 	window.scrollTo(0, 0)
-		// }
+		if (toggleState) {
+			window.scrollTo(0, 0)
+		}
 	}
 
 	return (
