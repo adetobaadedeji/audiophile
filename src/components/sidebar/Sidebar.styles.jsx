@@ -2,7 +2,8 @@ import styled, { css } from 'styled-components'
 import { screenSize } from '../../globalStyles'
 
 
-export const SidebarWrapper = styled.div``
+export const SidebarWrapper = styled.div`
+`
 
 export const SidebarContainer = styled.aside`
 	background-color: var(--color-white);
@@ -19,12 +20,14 @@ export const SidebarContainer = styled.aside`
 	left: 0;
 	right: 0;
 	z-index: 999;
-	overflow: hidden;
+	overflow: auto;
 	border-radius: 0 0 10px 10px;
 	max-height: 75rem;
 
 	${screenSize.md`
     max-height: 18rem;
+		overflow: hidden;
+
   `}
 
 	${screenSize.xmd`
