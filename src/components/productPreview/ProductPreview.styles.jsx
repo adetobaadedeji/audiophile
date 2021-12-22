@@ -29,9 +29,8 @@ export const ProductPreviewContainer = styled.section`
   `}
 
 	${screenSize.xmd`
-		flex-direction: ${({ index }) =>
-			index % 2 === 0 ? 'row' : 'row-reverse'
-		};
+		flex-direction: ${({ index }) => (index % 2 === 0 ? 'row' : 'row-reverse')};
+		flex-direction: ${({ index }) => (!index && 'row')};
 		align-items: center;
 		margin: 4rem 0;
 

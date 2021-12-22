@@ -1,9 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import ProductPreview from '../productPreview/ProductPreview'
-import { products } from '../../utils/productData'
+import { productsSelector } from '../../redux/slices/productsSlice'
+import { useSelector } from 'react-redux'
 
-const productPreviewSection = ({ category }) => {
+const ProductPreviewSection = ({ category }) => {
+	const productItems = useSelector(productsSelector)
+	const products = Object.keys(productItems).map((item) => productItems[item])
+
 	return (
 		<ProductPreviewSectionContainer>
 			{products
@@ -16,7 +20,7 @@ const productPreviewSection = ({ category }) => {
 	)
 }
 
-export default productPreviewSection
+export default ProductPreviewSection
 
 const ProductPreviewSectionContainer = styled.section`
 	width: 100%;
