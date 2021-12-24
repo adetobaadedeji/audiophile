@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import { productsSelector } from '../../redux/slices/productsSlice'
 import ProductPreview from '../../components/productPreview/ProductPreview'
 import ProductFeature from '../../components/productFeature/ProductFeature'
+import ProductGallery from '../../components/productGallery/ProductGallery'
 
 const ProductPage = () => {
 	const productItems = useSelector(productsSelector)
@@ -16,6 +17,7 @@ const ProductPage = () => {
 		<div>
 			<ProductPreview product={product} />
 			<ProductFeature product={product} />
+			<ProductGallery product={product} />
 		</div>
 	)
 }

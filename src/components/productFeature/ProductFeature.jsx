@@ -10,7 +10,6 @@ import {
 	FeatureListQtyText,
 	FeatureHeader,
 	FeatureInfo,
-	// FeatureInfoTwo,
 } from './ProductFeature.styles'
 
 const ProductFeature = ({product}) => {
@@ -21,7 +20,6 @@ const ProductFeature = ({product}) => {
 				<FeatureInfoContainer>
 					<FeatureHeader>Features</FeatureHeader>
 					<FeatureInfo>{features}</FeatureInfo>
-					{/* <FeatureInfoTwo></FeatureInfoTwo> */}
 				</FeatureInfoContainer>
 				<FeatureListContainer>
 					<FeatureHeader>In the box</FeatureHeader>
