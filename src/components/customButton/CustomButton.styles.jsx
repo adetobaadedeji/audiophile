@@ -27,7 +27,7 @@ const getButtonStyles = (props) => {
 
 export const CustomButtonContainer = styled(Link)`
 	cursor: pointer;
-	${getButtonStyles}
+	${getButtonStyles};
 	text-transform: uppercase;
 	text-decoration: none;
 	font-size: 1.3rem;
@@ -37,17 +37,17 @@ export const CustomButtonContainer = styled(Link)`
 	transition: var(--transition);
 
 	${screenSize.sm`
-		font-size: 1.1rem;
+		font-size: 1rem;
 		padding: 1.2rem 2.2rem;
   `}
 
 	${screenSize.md`
-		font-size: 0.95rem;
+		font-size: 0.86rem;
 		padding: ${({ inverted }) => (inverted ? '0.8rem 1.8rem' : '1rem 2rem')};
   `}
 
 	${screenSize.xmd`
-		font-size: 0.9rem;
+		font-size: 0.85rem;
 		padding: ${({ inverted }) => (inverted ? '0.8rem 1.8rem' : '1rem 2rem')};
   `}
 `

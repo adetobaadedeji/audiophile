@@ -63,7 +63,7 @@ export const products = {
 		},
 		others: [
 			{
-				slug: 'headphones/xx99-mark-one-headphones',
+				slug: 'xx99-mark-one-headphones',
 				name: 'XX99 Mark I',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
@@ -72,7 +72,7 @@ export const products = {
 				},
 			},
 			{
-				slug: 'headphones/xx59-headphones',
+				slug: 'xx59-headphones',
 				name: 'XX59',
 				image: {
 					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
@@ -81,7 +81,7 @@ export const products = {
 				},
 			},
 			{
-				slug: 'speakers/zx9-speaker',
+				slug: 'zx9-speaker',
 				name: 'ZX9 Speaker',
 				image: {
 					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
@@ -163,7 +163,7 @@ export const products = {
 		},
 		others: [
 			{
-				slug: 'headphones/xx99-mark-two-headphones',
+				slug: 'xx99-mark-two-headphones',
 				name: 'XX99 MK II',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-two-headphones.jpg',
@@ -172,7 +172,7 @@ export const products = {
 				},
 			},
 			{
-				slug: 'headphones/xx59-headphones',
+				slug: 'xx59-headphones',
 				name: 'XX59',
 				image: {
 					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
@@ -181,7 +181,7 @@ export const products = {
 				},
 			},
 			{
-				slug: 'speakers/zx9-speaker',
+				slug: 'zx9-speaker',
 				name: 'ZX9 Speaker',
 				image: {
 					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
@@ -251,7 +251,7 @@ export const products = {
 		},
 		others: [
 			{
-				slug: 'headphones/xx99-mark-two-headphones',
+				slug: 'xx99-mark-two-headphones',
 				name: 'XX99 Mark II',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-two-headphones.jpg',
@@ -260,7 +260,7 @@ export const products = {
 				},
 			},
 			{
-				slug: 'headphones/xx99-mark-one-headphones',
+				slug: 'xx99-mark-one-headphones',
 				name: 'XX99 Mark I',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
@@ -269,7 +269,7 @@ export const products = {
 				},
 			},
 			{
-				slug: 'speakers/zx9-speaker',
+				slug: 'zx9-speaker',
 				name: 'ZX9 Speaker',
 				image: {
 					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
@@ -355,7 +355,7 @@ export const products = {
 		},
 		others: [
 			{
-				slug: 'headphones/xx99-mark-one-headphones',
+				slug: 'xx99-mark-one-headphones',
 				name: 'XX99 Mark I',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
@@ -364,7 +364,7 @@ export const products = {
 				},
 			},
 			{
-				slug: 'headphones/xx59-headphones',
+				slug: 'xx59-headphones',
 				name: 'XX59',
 				image: {
 					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
@@ -373,7 +373,7 @@ export const products = {
 				},
 			},
 			{
-				slug: 'speakers/zx9-speaker',
+				slug: 'zx9-speaker',
 				name: 'ZX9 Speaker',
 				image: {
 					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
@@ -447,7 +447,7 @@ export const products = {
 		},
 		others: [
 			{
-				slug: 'speakers/zx9-speaker',
+				slug: 'zx9-speaker',
 				name: 'ZX9 Speaker',
 				image: {
 					mobile: '/images/shared/mobile/image-zx9-speaker.jpg',
@@ -456,7 +456,7 @@ export const products = {
 				},
 			},
 			{
-				slug: 'headphones/xx99-mark-one-headphones',
+				slug: 'xx99-mark-one-headphones',
 				name: 'XX99 Mark I',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
@@ -465,7 +465,7 @@ export const products = {
 				},
 			},
 			{
-				slug: 'headphones/xx59-headphones',
+				slug: 'xx59-headphones',
 				name: 'XX59',
 				image: {
 					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',
@@ -539,7 +539,7 @@ export const products = {
 		},
 		others: [
 			{
-				slug: 'speakers/zx7-speaker',
+				slug: 'zx7-speaker',
 				name: 'ZX7 Speaker',
 				image: {
 					mobile: '/images/shared/mobile/image-zx7-speaker.jpg',
@@ -548,7 +548,7 @@ export const products = {
 				},
 			},
 			{
-				slug: 'headphones/xx99-mark-one-headphones',
+				slug: 'xx99-mark-one-headphones',
 				name: 'XX99 Mark I',
 				image: {
 					mobile: '/images/shared/mobile/image-xx99-mark-one-headphones.jpg',
@@ -557,7 +557,7 @@ export const products = {
 				},
 			},
 			{
-				slug: 'headphones/xx59-headphones',
+				slug: 'xx59-headphones',
 				name: 'XX59',
 				image: {
 					mobile: '/images/shared/mobile/image-xx59-headphones.jpg',

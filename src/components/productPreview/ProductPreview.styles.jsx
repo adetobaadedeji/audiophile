@@ -91,15 +91,14 @@ export const MainHeading = styled.h1`
 	max-width: 75%;
 
 	${screenSize.sm`
-		font-size: 2.5rem;
-		line-height: 2.4rem;	
+		font-size: 2.1rem;
+		line-height: 2.2rem;	
 		max-width: 60%;
-
   `}
 
 	${screenSize.md`
-    font-size: 2.3rem;
-		line-height: 2.3rem;	
+    font-size: 2.1rem;
+		line-height: 2.2rem;	
 
     max-width: 45%;
   `};

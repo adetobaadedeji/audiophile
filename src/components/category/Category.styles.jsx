@@ -55,7 +55,7 @@ export const CategoryImage = styled.img`
 	margin-bottom: -30%;
 	transition: var(--transition);
 
-	${screenSize.xmd`
+	${screenSize.md`
   	max-width: 55%;
 		top: -32%;
   `}
@@ -75,9 +75,6 @@ export const CategoryHeader = styled.h2`
 	font-size: 1.1rem;
   `}
 	${screenSize.md`
-   font-size: 0.92rem;
-  `}
-	${screenSize.lg`
    font-size: 1rem;
   `}
 `
@@ -97,7 +94,7 @@ export const ButtonLink = styled(Link)`
 	font-size: 0.95rem;
   `}
 	${screenSize.md`
-  font-size: 0.85rem;
+  font-size: 0.86rem;
   `}
 
 	&::after {

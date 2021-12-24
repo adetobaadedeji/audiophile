@@ -14,17 +14,16 @@ export const CategorySectionContainer = styled.div`
     flex-direction: row;
 		padding-top: 3rem;
 		margin: 4rem 0 7rem;
-		gap: 0.5rem;
+		gap: 1rem;
   `}
 
 	${screenSize.xmd`
 		padding-top: 4rem;
-		gap: 1.2rem;
+		gap: 2rem;
   `}
 
 		${screenSize.xl`
 		padding-top: 5rem;
 		margin: 5rem 0 8rem;
-		gap: 1.2rem;
   `}
 `

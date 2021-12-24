@@ -62,8 +62,16 @@ export const FeatureHeader = styled.h2`
 	font-size: 2.4rem;
 	text-transform: uppercase;
 
+	${screenSize.sm`
+		font-size: 1.8rem;
+  `}
+
 	${screenSize.md`
 		font-size: 2.1rem;
+  `}
+
+	${screenSize.xmd`
+		font-size: 2rem;
   `}
 `
 
