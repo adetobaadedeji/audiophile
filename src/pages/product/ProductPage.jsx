@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { productsSelector } from '../../redux/slices/productsSlice'
 import ProductPreview from '../../components/productPreview/ProductPreview'
+import ProductFeature from '../../components/productFeature/ProductFeature'
 
 const ProductPage = () => {
 	const productItems = useSelector(productsSelector)
@@ -14,6 +15,7 @@ const ProductPage = () => {
 	return (
 		<div>
 			<ProductPreview product={product} />
+			<ProductFeature product={product} />
 		</div>
 	)
 }

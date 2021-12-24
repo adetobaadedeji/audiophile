@@ -30,10 +30,10 @@ export const ProductPreviewContainer = styled.section`
 
 	${screenSize.xmd`
 		flex-direction: ${({ index }) => (index % 2 === 0 ? 'row' : 'row-reverse')};
-		flex-direction: ${({ index }) => (!index && 'row')};
+		flex-direction: ${({ index }) => !index && 'row'};
 		align-items: center;
 		margin: 4rem 0;
-
+		gap: 7rem;
 	`}
 `
 export const ImageContainer = styled.div`
@@ -91,15 +91,15 @@ export const MainHeading = styled.h1`
 	max-width: 75%;
 
 	${screenSize.sm`
-		font-size: 2.75rem;
-		line-height: 2.8rem;	
+		font-size: 2.5rem;
+		line-height: 2.4rem;	
 		max-width: 60%;
 
   `}
 
 	${screenSize.md`
-    font-size: 2.5rem;
-		line-height: 2.5rem;	
+    font-size: 2.3rem;
+		line-height: 2.3rem;	
 
     max-width: 45%;
   `};
@@ -122,14 +122,15 @@ export const Description = styled.p`
 	font-weight: 400;
 
 	${screenSize.sm`
-		font-size: 1.2rem;
-		line-height: 1.8rem;
+		font-size: 1.1rem;
+		line-height: 1.6rem;
     max-width: 29rem;
   `}
 
 	${screenSize.md`
 		max-width: 26rem;
-		font-size: 1.1rem;
+		font-size: 1rem;
+		line-height: 1.56rem;
   `}
 
 	${screenSize.xmd`

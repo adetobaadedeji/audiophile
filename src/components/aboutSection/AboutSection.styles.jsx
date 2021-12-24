@@ -96,7 +96,7 @@ export const ContentHeading = styled.div`
 		font-weight: 700;
   `}
 `
-export const ContentDescription = styled.div`
+export const ContentDescription = styled.p`
 	font-size: 1.5rem;
 	line-height: 2.3rem;
 	color: var(--color-gray-800);

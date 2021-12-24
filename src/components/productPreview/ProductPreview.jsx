@@ -21,7 +21,6 @@ const ProductPreview = ({ product, index }) => {
 		categoryImage: { mobile, tablet, desktop },
 	} = product
 	return (
-		<div>
 			<SectionContainer>
 				<ProductPreviewContainer index={index}>
 					<ImageContainer>
@@ -44,7 +43,6 @@ const ProductPreview = ({ product, index }) => {
 					</ProductPreviewContent>
 				</ProductPreviewContainer>
 			</SectionContainer>
-		</div>
 	)
 }
 
