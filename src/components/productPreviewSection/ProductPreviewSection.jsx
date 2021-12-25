@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import ProductPreview from '../productPreview/ProductPreview'
-import { productsSelector } from '../../redux/slices/productsSlice'
+// import { productsSelector } from '../../redux/slices/productsSlice'
 import { useSelector } from 'react-redux'
+import { selectProductsForPreview } from '../../redux/selectors/productsSelector'
 
 const ProductPreviewSection = ({ category }) => {
-	const productItems = useSelector(productsSelector)
-	const products = Object.keys(productItems).map((item) => productItems[item])
+	// const productItems = useSelector(productsSelector)
+	// const products = Object.keys(productItems).map((item) => productItems[item])
+
+	
+	const products = useSelector(selectProductsForPreview)
 
 	return (
 		<ProductPreviewSectionContainer>
