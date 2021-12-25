@@ -5,10 +5,14 @@ const defaultStyles = css`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: start;
 	gap: 4rem;
 
-	${screenSize.xmd`
+	${screenSize.sm`
+		align-items: center;		
+	`}
+
+	${screenSize.md`
 		align-items: start;		
 	`}
 
@@ -17,15 +21,15 @@ const defaultStyles = css`
 	`}
 `
 
-export const ProductPreviewContainer = styled.section`
+export const ProductDetailContainer = styled.section`
 	${defaultStyles}
-	margin: 5rem 0;
+	margin: 3rem 0  5rem 0;
 	& > * {
 		${defaultStyles}
 	}
 
 	${screenSize.md`
-   margin: 3.5rem 0;
+   margin: 2rem 0 3.5rem 0;
   `}
 
 	${screenSize.xmd`
@@ -49,9 +53,9 @@ export const ImageContainer = styled.div`
 `
 export const Image = styled.img`
 	width: 100%;
-	border-radius: var(--radius);
+  border-radius: var(--radius-2);
 `
-export const ProductPreviewContent = styled.div`
+export const ProductDetailContent = styled.div`
 	gap: 2rem;
 
 	${screenSize.md`
@@ -85,7 +89,6 @@ export const MainHeading = styled.h1`
 	text-transform: uppercase;
 	font-size: 2.8rem;
 	letter-spacing: 0.125rem;
-	text-align: center;
 	line-height: 3rem;
 	font-weight: 700;
 	color: var(--color-gray-700);
@@ -95,12 +98,13 @@ export const MainHeading = styled.h1`
 		font-size: 2.1rem;
 		line-height: 2.2rem;	
 		max-width: 60%;
+    text-align: center;
   `}
 
 	${screenSize.md`
     font-size: 2.1rem;
 		line-height: 2.2rem;	
-
+    text-align: left;
     max-width: 45%;
   `};
 
@@ -114,8 +118,7 @@ export const MainHeading = styled.h1`
 export const Description = styled.p`
 	font-size: 1.5rem;
 	line-height: 2.4rem;
-	text-align: center;
-	margin: 0 0 10px;
+	margin: 0 0 5px;
 	color: var(--color-gray-800);
 	opacity: 0.65;
 	letter-spacing: 0.02rem;
@@ -125,12 +128,15 @@ export const Description = styled.p`
 		font-size: 1.1rem;
 		line-height: 1.6rem;
     max-width: 29rem;
+    text-align: center;
   `}
 
 	${screenSize.md`
-		max-width: 26rem;
+		max-width: 36rem;
 		font-size: 1rem;
 		line-height: 1.56rem;
+    text-align: left;
+
   `}
 
 	${screenSize.xmd`
@@ -139,5 +145,59 @@ export const Description = styled.p`
 		line-height: 1.5rem;
     text-align: left;
 		font-weight: 500;
+  `}
+`
+export const ProductPrice = styled.p`
+	font-size: 1.8rem;
+	font-weight: 700;
+	margin: 0 0 5px;
+
+	${screenSize.sm`
+		font-size: 1.2rem;
+  `}
+`
+
+export const ButtonsContainer = styled.div`
+display: flex;
+gap: 1.5rem;
+`
+
+export const ControlButtonsContainer = styled.span`
+	font-weight: bold;
+	display: flex;
+`
+
+export const ControlButton = styled.button`
+	font-size: 1.5rem;
+	display: block;
+	padding: 1rem 1.8rem;
+	cursor: pointer;
+	border: none;
+	outline-style: none;
+	background-color: var(--color-gray-200);
+
+	&:hover {
+		background-color: var(--color-gray-300);
+		color: var(--color-main-normal);
+	}
+
+	${screenSize.sm`
+		font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+
+  `}
+`
+export const CartValue = styled.span`
+	text-align: center;
+	display: flex;
+	align-items: center;
+	padding: 0.1rem 1rem;
+	font-size: 1.3rem;
+	background-color: var(--color-gray-200);
+
+	${screenSize.sm`
+		font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+
   `}
 `

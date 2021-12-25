@@ -2,13 +2,14 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 // import { productsSelector } from '../../redux/slices/productsSlice'
-import ProductPreview from '../../components/productPreview/ProductPreview'
+import ProductDetail from '../../components/productDetail/ProductDetail'
 import ProductFeature from '../../components/productFeature/ProductFeature'
 import ProductGallery from '../../components/productGallery/ProductGallery'
 import ProductRelated from '../../components/productRelated/ProductRelated'
 import CategorySection from '../../components/categorySection/CategorySection'
 import AboutSection from '../../components/aboutSection/AboutSection'
 import { selectSingleProduct } from '../../redux/selectors/productsSelector'
+import GoBackBtn from '../../components/goBackBtn/GoBackBtn'
 
 
 const ProductPage = () => {
@@ -26,7 +27,8 @@ const ProductPage = () => {
 
 	return (
 		<div>
-			<ProductPreview product={product} />
+			<GoBackBtn />
+			<ProductDetail product={product} />
 			<ProductFeature product={product} />
 			<ProductGallery product={product} />
 			<ProductRelated product={product} />
