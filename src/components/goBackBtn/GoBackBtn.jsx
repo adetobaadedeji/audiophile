@@ -25,6 +25,7 @@ const Button = styled.button`
 	margin-top: 2rem;
 	letter-spacing: 0.05rem;
 	text-align: left;
+  transition: var(--transition);
 
 	&:hover {
 		color: var(--color-main-normal);

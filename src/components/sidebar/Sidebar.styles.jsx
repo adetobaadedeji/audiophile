@@ -27,6 +27,12 @@ export const SidebarContainer = styled.aside`
 		max-height: 65rem;
 	}
 
+	${screenSize.sm`
+    max-height: 55rem;
+	
+
+  `}
+
 	${screenSize.md`
     max-height: 18rem;
 		overflow: hidden;
