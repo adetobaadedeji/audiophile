@@ -35,6 +35,7 @@ export const CustomButtonContainer = styled(Link)`
 	font-weight: 600;
 	padding: 1.4rem 2.4rem;
 	transition: var(--transition);
+	font-family: Manrope;
 
 	${screenSize.sm`
 		font-size: 1rem;

@@ -3,10 +3,19 @@ import { useSelector, useDispatch } from 'react-redux'
 import { isCartOpenSelector, toggleCart } from '../../redux/slices/cartSlice'
 // import SectionContainer from '../sectionContainer/SectionContainer'
 import {
+  Amount,
+  CartItems,
+	CartModalButton,
 	CartModalContainer,
-  CartModalContent,
-	CartModalOverlay, 
-  CartModalWrapper,
+	CartModalContent,
+	CartModalFooter,
+	CartModalHeader,
+	CartModalMain,
+	CartModalOverlay,
+	CartModalWrapper,
+  RemoveButton,
+  Total,
+	TotalAmount,
 } from './CartModal.styles'
 
 const CartModal = () => {
@@ -21,11 +30,20 @@ const CartModal = () => {
 		<CartModalWrapper>
 			<CartModalOverlay isCartOpen={isCartOpen} onClick={handleOverlayToggle} />
 			<CartModalContainer>
-				{/* <SectionContainer> */}
-					<CartModalContent isCartOpen={isCartOpen}>
-						This is a modal
-					</CartModalContent>
-				{/* </SectionContainer> */}
+				<CartModalContent isCartOpen={isCartOpen}>
+					<CartModalHeader>
+						<CartItems>Cart (0)</CartItems>
+						<RemoveButton>Remove All</RemoveButton>
+          </CartModalHeader>
+					<CartModalMain></CartModalMain>
+					<CartModalFooter>
+            <TotalAmount>
+              <Total>Total</Total>
+              <Amount>$ 2,999</Amount>
+            </TotalAmount>
+            <CartModalButton>Checkout</CartModalButton>
+          </CartModalFooter>
+				</CartModalContent>
 			</CartModalContainer>
 		</CartModalWrapper>
 	)
