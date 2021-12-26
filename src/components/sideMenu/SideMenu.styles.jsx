@@ -1,15 +1,24 @@
 import styled, { css } from 'styled-components'
 import { screenSize } from '../../globalStyles'
 
+export const SideMenuWrapper = styled.div``
 
-export const SidebarWrapper = styled.div``
-
-export const SidebarContainer = styled.aside`
+export const SideMenuOverlay = styled.div`
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 900;
+	display: ${({ isMenuOpen }) => (isMenuOpen ? 'block' : 'none')};
+`
+export const SideMenuContainer = styled.aside`
 	background-color: var(--color-white);
 	transition: var(--transition);
 	transform: translateX(-100vw);
-	${({ toggleState }) =>
-		toggleState &&
+	${({ isMenuOpen }) =>
+		isMenuOpen &&
 		css`
 			transform: translateX(0px);
 			/* box-shadow: 0 0 0 1000rem rgba(0, 0, 0, 0.6); */
@@ -44,14 +53,4 @@ export const SidebarContainer = styled.aside`
   `}
 `
 
-export const SidebarOverlay = styled.div`
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
-	z-index: 900;
-	display: ${({toggleState}) => toggleState ? 'block' : 'none'};
-	
-`
+

@@ -13,7 +13,7 @@ import { screenSize } from '../../globalStyles'
 // }
 // export default SectionContainer
 
-const SectionContainer = ({children}) => {
+const SectionContainer = ({ children }) => {
 	return <Section>{children}</Section>
 }
 

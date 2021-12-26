@@ -31,8 +31,8 @@ export const Hamburger = styled.div`
 	&::before {
 		transform: translateY(7px);
 	}
-	${({ toggleState }) =>
-		toggleState &&
+	${({ isMenuOpen }) =>
+		isMenuOpen &&
 		css`
 			transform: translateX(-21px);
 			background: transparent;

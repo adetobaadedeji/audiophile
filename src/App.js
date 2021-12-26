@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
-import Sidebar from './components/sidebar/Sidebar'
+import SideMenu from './components/sideMenu/SideMenu'
 import ScrollToTop from './components/scrollToTop/ScrollToTop'
 import { GlobalStyles } from './globalStyles'
 import EarphonesPage from './pages/earphones/EarphonesPage'
@@ -10,6 +10,7 @@ import HeadphonesPage from './pages/headphones/HeadphonesPage'
 import Homepage from './pages/homepage/Homepage'
 import ProductPage from './pages/product/ProductPage'
 import SpeakersPage from './pages/speakers/SpeakersPage'
+import CartModal from './components/cartModal/CartModal'
 
 const routes = [
 	{
@@ -41,7 +42,8 @@ function App() {
 			<ScrollToTop />
 			<GlobalStyles />
 			<Header />
-			<Sidebar />
+			<CartModal />
+			<SideMenu />
 			<Switch>
 				{routes.map((route, index) => (
 					<Route

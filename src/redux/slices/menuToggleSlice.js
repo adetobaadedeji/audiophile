@@ -3,18 +3,18 @@ import { createSlice } from '@reduxjs/toolkit'
 export const menuToggleSlice = createSlice({
 	name: 'menuToggle',
 	initialState: {
-		toggleState: false,
+		isMenuOpen: false,
 	},
 	reducers: {
 		toggleMenu: (state, action) => {
-			// state.toggleState = action.payload
-			state.toggleState = !state.toggleState
+			// state.isMenuOpen = action.payload
+			state.isMenuOpen = !state.isMenuOpen
 		},
 	},
 })
 
 export const { toggleMenu } = menuToggleSlice.actions
 
-export const toggleStateSelector = (state) => state.menuToggle.toggleState
+export const isMenuOpenSelector = (state) => state.menuToggle.isMenuOpen
 
 export default menuToggleSlice.reducer

@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {
 	toggleMenu,
-	toggleStateSelector,
+	isMenuOpenSelector,
 } from '../../redux/slices/menuToggleSlice'
 import {
 	CategoryContainer,
@@ -13,11 +13,11 @@ import {
 } from './Category.styles'
 
 const Category = ({ item }) => {
-	const toggleState = useSelector(toggleStateSelector)
+	const isMenuOpen = useSelector(isMenuOpenSelector)
 	const dispatch = useDispatch()
 
 	const handleToggle = () => {
-		if (toggleState) {
+		if (isMenuOpen) {
 			dispatch(toggleMenu())
 		}
 	}

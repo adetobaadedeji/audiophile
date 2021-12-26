@@ -2,27 +2,27 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {
 	toggleMenu,
-	toggleStateSelector,
+	isMenuOpenSelector,
 } from '../../redux/slices/menuToggleSlice'
 import { HambugerContainer, Hamburger } from './MenuHamburger.styles'
 
 const MenuHamburger = () => {
-	const toggleState = useSelector(toggleStateSelector)
+	const isMenuOpen = useSelector(isMenuOpenSelector)
 	const dispatch = useDispatch()
 
 	const handleMenuToggle = () => {
-		// dispatch(toggleMenu(!toggleState))
+		// dispatch(toggleMenu(!isMenuOpen))
 		dispatch(toggleMenu())
 
 		// scroll back to top if the Hambuger is closed
-		if (toggleState) {
+		if (isMenuOpen) {
 			window.scrollTo(0, 0)
 		}
 	}
 
 	return (
 		<HambugerContainer onClick={handleMenuToggle}>
-			<Hamburger toggleState={toggleState} />
+			<Hamburger isMenuOpen={isMenuOpen} />
 		</HambugerContainer>
 	)
 }

@@ -6,7 +6,10 @@ import SectionContainer from '../sectionContainer/SectionContainer'
 
 const GoBackBtn = () => {
 	const history = useHistory()
-	const goToPreviousPath = () => history.goBack()
+	const goToPreviousPath = () => {
+    window.scrollTo(0, 0)
+    history.goBack()
+  }
 	return (
 		<SectionContainer>
 			<Button onClick={goToPreviousPath}>Go Back</Button>
