@@ -1,5 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+ import { ToastContainer } from 'react-toastify'
+ import 'react-toastify/dist/ReactToastify.css'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import SideMenu from './components/sideMenu/SideMenu'
@@ -55,6 +57,7 @@ function App() {
 				))}
 			</Switch>
 			<Footer />
+			<ToastContainer />
 		</Router>
 	)
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { isCartOpenSelector, toggleCart } from '../../redux/slices/cartSlice'
+import { isCartOpenSelector, toggleCart } from '../../redux/cart/cartSlice'
 // import SectionContainer from '../sectionContainer/SectionContainer'
 import {
   Amount,

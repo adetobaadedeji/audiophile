@@ -1,30 +1,48 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectProductToCount } from '../../redux/cart/cartSelectors'
+import {
+	addToCart,
+	decreaseQuantity,
+	increaseQuantity,
+} from '../../redux/cart/cartSlice'
 import CustomButton from '../customButton/CustomButton'
 import SectionContainer from '../sectionContainer/SectionContainer'
 import {
-  ButtonsContainer,
-  CartValue,
-  ControlButton,
-  ControlButtonsContainer,
+	ButtonsContainer,
+	CartValue,
+	ControlButton,
+	ControlButtonsContainer,
 	Description,
 	Image,
 	ImageContainer,
 	MainHeading,
 	ProductDetailContainer,
 	ProductDetailContent,
-  ProductPrice,
+	ProductPrice,
 	TopHeading,
 } from './ProductDetail.styles'
 
 const ProductDetail = ({ product, index }) => {
+	const dispatch = useDispatch()
+	
+	const singleProductCount = useSelector(selectProductToCount(product.id))
+
+	const handleAddToCart = () => dispatch(addToCart(product))
+
+	const handledecreaseQuantity = () => dispatch(decreaseQuantity(product))
+
+	const handleIncreaseQuantity = () => dispatch(increaseQuantity(product))
+
 	const width = window.innerWidth
 	const {
 		description,
 		name,
-    price,
+		price,
 		new_product,
 		categoryImage: { mobile, tablet, desktop },
 	} = product
+
 	return (
 		<SectionContainer>
 			<ProductDetailContainer index={index}>
@@ -38,14 +56,18 @@ const ProductDetail = ({ product, index }) => {
 					{new_product && <TopHeading>New Product</TopHeading>}
 					<MainHeading>{name}</MainHeading>
 					<Description>{description}</Description>
-					<ProductPrice>${' '}{price.toLocaleString('en-US')}</ProductPrice>
+					<ProductPrice>$ {price.toLocaleString('en-US')}</ProductPrice>
 					<ButtonsContainer>
 						<ControlButtonsContainer>
-							<ControlButton>-</ControlButton>
-							<CartValue>0</CartValue>
-							<ControlButton>+</ControlButton>
+							<ControlButton onClick={handledecreaseQuantity}>-</ControlButton>
+							<CartValue>
+								{singleProductCount ? singleProductCount.quantity : '0'}
+							</CartValue>
+							<ControlButton onClick={handleIncreaseQuantity}>+</ControlButton>
 						</ControlButtonsContainer>
-						<CustomButton as='div'>Add To Cart</CustomButton>
+						<CustomButton as='button' onClick={handleAddToCart}>
+							Add To Cart
+						</CustomButton>
 					</ButtonsContainer>
 				</ProductDetailContent>
 			</ProductDetailContainer>

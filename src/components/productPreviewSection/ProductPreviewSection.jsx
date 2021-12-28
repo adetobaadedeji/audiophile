@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ProductPreview from '../productPreview/ProductPreview'
 // import { productsSelector } from '../../redux/slices/productsSlice'
 import { useSelector } from 'react-redux'
-import { selectProductsForPreview } from '../../redux/selectors/productsSelector'
+import { selectProductsForPreview } from '../../redux/products/productsSelector'
 
 const ProductPreviewSection = ({ category }) => {
 	// const productItems = useSelector(productsSelector)

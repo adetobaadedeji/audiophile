@@ -88,7 +88,24 @@ export const MenuContainer = styled.div`
 `
 export const CartLogoContainer = styled.div`
 	display: flex;
+	position: relative;
 `
+
+export const CartQuantity = styled.span`
+position: absolute;
+top: -50%;
+right: -50%;
+background-color: var(--color-main-normal);
+color: var(--color-white);
+width: 1.2rem;
+height: 1.2rem;
+border-radius: 50%;
+display: ${({productsCount}) => productsCount >= 1  ? 'flex' : 'none' };
+align-items: center;
+justify-content: center;
+font-size: 0.8rem;
+`
+
 export const MenuLink = styled(NavLink)`
 	text-decoration: none;
 	color: var(--color-gray-200);

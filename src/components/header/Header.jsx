@@ -3,15 +3,14 @@ import { useSelector, useDispatch } from 'react-redux'
 import {
 	toggleMenu,
 	isMenuOpenSelector,
-} from '../../redux/slices/menuToggleSlice'
-import { 
-		// isCartOpenSelector, 
-		toggleCart 
-	} from '../../redux/slices/cartSlice'
+} from '../../redux/menuToggle/menuToggleSlice'
+import { toggleCart } from '../../redux/cart/cartSlice'
+import { selectCartProductsCount } from '../../redux/cart/cartSelectors'
 import logo from '../../assets/shared/desktop/logo.svg'
 import icon_cart from '../../assets/shared/desktop/icon-cart.svg'
 import {
 	CartLogoContainer,
+	CartQuantity,
 	HeaderContainer,
 	HeaderContent,
 	Image,
@@ -26,7 +25,7 @@ import MenuHamburger from '../menuHamburger/MenuHamburger'
 const Header = () => {
 	const dispatch = useDispatch()
 	const isMenuOpen = useSelector(isMenuOpenSelector)
-	// const isCartOpen = useSelector(isCartOpenSelector)
+	const productsCount = useSelector(selectCartProductsCount)
 
 	const handleMenuToggle = () => {
 		if (isMenuOpen) {
@@ -62,6 +61,9 @@ const Header = () => {
 						className='last-child'
 					>
 						<Image src={icon_cart} alt='cart icon' />
+						{!!productsCount && (
+							<CartQuantity productsCount>{productsCount}</CartQuantity>
+						)}
 					</CartLogoContainer>
 				</HeaderContent>
 			</HeaderContainer>

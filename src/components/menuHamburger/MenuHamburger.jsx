@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import {
 	toggleMenu,
 	isMenuOpenSelector,
-} from '../../redux/slices/menuToggleSlice'
+} from '../../redux/menuToggle/menuToggleSlice'
 import { HambugerContainer, Hamburger } from './MenuHamburger.styles'
 
 const MenuHamburger = () => {
