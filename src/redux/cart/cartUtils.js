@@ -50,7 +50,7 @@ export const removeProductFromCart = (cartProducts, productToAdd) => {
 	)
 
 	if (productExist.quantity === 1) {
-		toast.error(`${productToAdd.name} removed to cart `, toastAction)
+		toast.error(`${productToAdd.name} removed from cart `, toastAction)
 		return cartProducts.filter((product) => product.id !== productToAdd.id)
 	} else {
 		return cartProducts.map((product) =>

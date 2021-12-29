@@ -10,13 +10,9 @@ import {
 export const cartSlice = createSlice({
 	name: 'cart',
 	initialState: {
-		isCartOpen: false,
 		cartProducts: [],
 	},
 	reducers: {
-		toggleCart: (state) => {
-			state.isCartOpen = !state.isCartOpen
-		},
 		addToCart: (state, action) => {
 			state.cartProducts = addProductToCart(state.cartProducts, action.payload)
 		},
@@ -45,14 +41,11 @@ export const cartSlice = createSlice({
 })
 
 export const {
-	toggleCart,
 	addToCart,
 	increaseQuantity,
 	decreaseQuantity,
 	removeFromCart,
 	clearAllFromCart,
 } = cartSlice.actions
-
-export const isCartOpenSelector = (state) => state.cart.isCartOpen
 
 export default cartSlice.reducer

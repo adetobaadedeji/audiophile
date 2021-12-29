@@ -7,9 +7,14 @@ export const selectCartProducts = createSelector(
 	(cart) => cart.cartProducts
 )
 
-export const selectProductToCount = (productId) =>
+export const selectCartQuantity = createSelector(
+	[selectCartProducts],
+	(cartProducts) => cartProducts.length
+)
+
+export const selectSingleProductToCount = (productId) =>
 	createSelector([selectCartProducts], (cartProducts) =>
-		cartProducts.find(product => product.id === productId)
+		cartProducts.find((product) => product.id === productId)
 	)
 
 export const selectCartProductsCount = createSelector(

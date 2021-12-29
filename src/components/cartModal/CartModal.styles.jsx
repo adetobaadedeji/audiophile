@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-// import { screenSize } from '../../globalStyles'
+import { screenSize } from '../../globalStyles'
 
 export const CartModalWrapper = styled.div``
 
@@ -23,39 +23,57 @@ export const CartModalContainer = styled.aside`
 	transform: translate(-50%, -50%);
 	z-index: 1001;
 	width: 87%;
-	/* min-height: 42rem;
-	height: 42rem;
-	max-height: 42rem; */
-`
+	max-width: 320px;
 
+	${screenSize.md`
+		transform: translate(10%, -100%);
+		
+	`}
+
+	@media (min-width: 765px) {
+		transform: translate(10%, -65%);
+	}
+
+	${screenSize.xmd`
+		transform: translate(40%, -65%);
+		
+	`}
+	${screenSize.lg`
+		transform: translate(50%, -68%);
+		
+	`}
+	${screenSize.xl`
+		transform: translate(70%, -65%);
+		
+	`}
+`
 export const CartModalContent = styled.div`
 	background-color: var(--color-white);
 	width: 100%;
-	/* height: 100%; */
-	padding: 3rem 2.5rem;
-	min-height: 42rem;
-	height: 42rem;
-	max-height: 42rem;
+	padding: 30px 25px;
+	min-height: 420px;
+	height: 420px;
+	max-height: 420px;
 	overflow: auto;
 	border-radius: var(--radius);
 	display: ${({ isCartOpen }) => (isCartOpen ? 'flex' : 'none')};
 	flex-direction: column;
-	/* font-family: Manrope; */
+
 `
 export const CartModalHeader = styled.header`
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	font-size: 1.5rem;
+	font-size: 15px;
 `
-export const CartItems = styled.span`
+export const CartQuantity = styled.span`
 	font-weight: 600;
-	letter-spacing: 0.1rem;
+	letter-spacing: 1px;
 	text-transform: uppercase;
 `
 export const RemoveButton = styled.button`
 	background-color: var(--color-white);
-	letter-spacing: 0.1rem;
+	letter-spacing: 1px;
 	font-weight: 600;
 	color: var(--color-gray-600);
 	text-decoration: underline;
@@ -63,7 +81,7 @@ export const RemoveButton = styled.button`
 	cursor: pointer;
 	border: none;
 	outline-style: none;
-	text-underline-offset: 0.15rem;
+	text-underline-offset: 1.5px;
 
 	&:hover {
 		color: var(--color-main-normal);
@@ -71,14 +89,59 @@ export const RemoveButton = styled.button`
 `
 export const CartModalMain = styled.main`
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: ${({ products }) =>
+		products.length > 0 ? 'start' : 'center'};
+	align-items: center;
+	margin: 20px 0 15px;
+	gap: 13px;
+	height: 250px;
+	max-height: 250px;
+	overflow: auto;
+
+
+	span {
+		font-size: 15px;
+		text-align: center;
+		font-weight: 500;
+	}
 `
+export const CartModalMainWrapper = styled.main`
+	width: 100%;
+	display: flex;
+	align-items: center;
+`
+
+export const ImageContainer = styled.div`
+	max-width: 64px;
+	margin-right: 10px;
+`
+export const Image = styled.img`
+	width: 100%;
+	border-radius: var(--radius);
+`
+export const ProductNamePrice = styled.div``
+export const ProductName = styled.p`
+	font-size: 13.4px;
+	font-weight: 700;
+	margin-bottom: 5px;
+`
+export const ProductPrice = styled.p`
+	font-size: 12.8px;
+	font-weight: 600;
+	color: var(--color-gray-600);
+`
+export const ControlButtonsContainer = styled.div`
+	margin-left: auto;
+`
+
 export const CartModalFooter = styled.footer`
 	width: 100%;
 	display: flex;
   flex-direction: column;
   margin-top: auto;
 `
-
 export const TotalAmount = styled.div`
 	display: flex;
 	justify-content: space-between;
@@ -86,21 +149,20 @@ export const TotalAmount = styled.div`
 	font-weight: 600;
 `
 export const Total = styled.span`
-	font-size: 1.3rem;
+	font-size: 13px;
 	color: var(--color-gray-600);
-	letter-spacing: 0.1rem;
+	letter-spacing: 1px;
 	text-transform: uppercase;
 `
 export const Amount = styled.span`
-	font-size: 1.5rem;
+	font-size: 15px;
 `
-
 export const CartModalButton = styled.button`
 	width: 100%;
-	font-size: 1.3rem;
+	font-size: 13px;
 	font-weight: 600;
-	letter-spacing: 0.1rem;
-	padding: 1.5rem 0;
+	letter-spacing: 1px;
+	padding: 15px 0;
 	text-align: center;
 	color: var(--color-white);
 	background-color: var(--color-main-normal);

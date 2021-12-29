@@ -1,10 +1,10 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import {
+	toggleCart,
 	toggleMenu,
 	isMenuOpenSelector,
-} from '../../redux/menuToggle/menuToggleSlice'
-import { toggleCart } from '../../redux/cart/cartSlice'
+} from '../../redux/uiToggle/uiToggleSlice'
 import { selectCartProductsCount } from '../../redux/cart/cartSelectors'
 import logo from '../../assets/shared/desktop/logo.svg'
 import icon_cart from '../../assets/shared/desktop/icon-cart.svg'
@@ -35,6 +35,12 @@ const Header = () => {
 	}
 
 	const handleCartToggle = () => {
+		// This will close the SideMenu if open before opening the cartModal
+		if (isMenuOpen) {
+			dispatch(toggleMenu())
+		}
+
+		// This will open/close the cartModal
 		dispatch(toggleCart())
 	}
 

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import {
 	toggleMenu,
 	isMenuOpenSelector,
-} from '../../redux/menuToggle/menuToggleSlice'
+} from '../../redux/uiToggle/uiToggleSlice'
 import {
 	CategoryContainer,
 	CategoryHeader,

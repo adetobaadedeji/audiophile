@@ -159,7 +159,7 @@ export const ProductPrice = styled.p`
 
 export const ButtonsContainer = styled.div`
 display: flex;
-gap: 1.5rem;
+gap: 1rem;
 `
 
 export const ControlButtonsContainer = styled.span`

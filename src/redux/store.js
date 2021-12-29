@@ -12,18 +12,20 @@ import {
 import storage from 'reduxjs-toolkit-persist/lib/storage'
 import autoMergeLevel2 from 'reduxjs-toolkit-persist/lib/stateReconciler/autoMergeLevel2'
 
-import menuToggleReducer from './menuToggle/menuToggleSlice'
+import uiToggleReducer from './uiToggle/uiToggleSlice'
 import productsReducer from './products/productsSlice'
 import cartSlice from './cart/cartSlice'
 
 const persistConfig = {
 	key: 'root',
 	storage: storage,
+	version: 1,
+	whitelist: ['cart'],
 	stateReconciler: autoMergeLevel2,
 }
 
 const reducers = combineReducers({
-	menuToggle: menuToggleReducer,
+	uiToggle: uiToggleReducer,
 	products: productsReducer,
 	cart: cartSlice,
 })
