@@ -92,18 +92,18 @@ export const CartLogoContainer = styled.div`
 `
 
 export const CartQuantity = styled.span`
-position: absolute;
-top: -50%;
-right: -50%;
-background-color: var(--color-main-normal);
-color: var(--color-white);
-width: 1.2rem;
-height: 1.2rem;
-border-radius: 50%;
-display: ${({productsCount}) => productsCount >= 1  ? 'flex' : 'none' };
-align-items: center;
-justify-content: center;
-font-size: 0.8rem;
+	position: absolute;
+	top: -50%;
+	right: -50%;
+	background-color: var(--color-main-normal);
+	color: var(--color-white);
+	width: 19px;
+	height: 19px;
+	border-radius: 50%;
+	display: ${({ productsCount }) => (productsCount >= 1 ? 'flex' : 'none')};
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
 `
 
 export const MenuLink = styled(NavLink)`
