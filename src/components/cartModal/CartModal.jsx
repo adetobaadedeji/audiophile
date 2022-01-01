@@ -10,7 +10,7 @@ import {
 	selectCartProducts,
 	selectCartTotal,
 } from '../../redux/cart/cartSelectors'
-import ControlButtons from '../contolButtons/ControlButtons'
+
 import {
 	Amount,
 	CartQuantity,
@@ -20,19 +20,13 @@ import {
 	CartModalFooter,
 	CartModalHeader,
 	CartModalMain,
-	CartModalMainWrapper,
 	CartModalOverlay,
 	CartModalWrapper,
-	ControlButtonsContainer,
-	Image,
-	ImageContainer,
-	ProductNamePrice,
-	ProductName,
-	ProductPrice,
 	RemoveButton,
 	Total,
 	TotalAmount,
 } from './CartModal.styles'
+import CartItem from '../cartItem/CartItem'
 
 const CartModal = () => {
 	const dispatch = useDispatch()
@@ -40,7 +34,6 @@ const CartModal = () => {
 	const cartQuantity = useSelector(selectCartQuantity)
 	const products = useSelector(selectCartProducts)
 	const total = useSelector(selectCartTotal)
-
 
 	const handleOverlayToggle = () => {
 		dispatch(toggleCart())
@@ -63,25 +56,9 @@ const CartModal = () => {
 					</CartModalHeader>
 					<CartModalMain products={products}>
 						{products.length > 0 ? (
-							products.map((product, index) => {
-								const { cartImage, shortName, price } = product
-								return (
-									<CartModalMainWrapper key={index}>
-										<ImageContainer>
-											<Image src={cartImage} />
-										</ImageContainer>
-										<ProductNamePrice>
-											<ProductName>{shortName}</ProductName>
-											<ProductPrice>
-												$ {price.toLocaleString('en-US')}
-											</ProductPrice>
-										</ProductNamePrice>
-										<ControlButtonsContainer>
-											<ControlButtons product={product} small='true'/>
-										</ControlButtonsContainer>
-									</CartModalMainWrapper>
-								)
-							})
+							products.map((product, index) => (
+								<CartItem key={index} product={product} />
+							))
 						) : (
 							<span>Your cart is empty!</span>
 						)}
@@ -89,9 +66,9 @@ const CartModal = () => {
 					<CartModalFooter>
 						<TotalAmount>
 							<Total>Total</Total>
-							<Amount>${' '}{total.toLocaleString('en-US')}</Amount>
+							<Amount>$ {total.toLocaleString('en-US')}</Amount>
 						</TotalAmount>
-						<CartModalButton>Checkout</CartModalButton>
+						<CartModalButton to='/checkout'>Checkout</CartModalButton>
 					</CartModalFooter>
 				</CartModalContent>
 			</CartModalContainer>

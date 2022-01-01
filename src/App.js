@@ -13,6 +13,7 @@ import Homepage from './pages/homepage/Homepage'
 import ProductPage from './pages/product/ProductPage'
 import SpeakersPage from './pages/speakers/SpeakersPage'
 import CartModal from './components/cartModal/CartModal'
+import CheckoutPage from './pages/checkout/CheckoutPage'
 
 const routes = [
 	{
@@ -35,6 +36,10 @@ const routes = [
 	{
 		path: '/product/:productId',
 		component: ProductPage,
+	},
+	{
+		path: '/checkout',
+		component: CheckoutPage,
 	},
 ]
 

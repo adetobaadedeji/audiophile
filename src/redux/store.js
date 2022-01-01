@@ -19,7 +19,7 @@ import cartSlice from './cart/cartSlice'
 const persistConfig = {
 	key: 'root',
 	storage: storage,
-	version: 1,
+	version: 0,
 	whitelist: ['cart'],
 	stateReconciler: autoMergeLevel2,
 }

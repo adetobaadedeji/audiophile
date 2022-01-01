@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { screenSize } from '../../globalStyles'
+import { Link } from 'react-router-dom'
 
 export const CartModalWrapper = styled.div``
 
@@ -26,24 +27,16 @@ export const CartModalContainer = styled.aside`
 	max-width: 320px;
 
 	${screenSize.md`
-		transform: translate(10%, -100%);
-		
+		top: 0;
+		right: 0;
+		transform: translate(-50%, 25%);
 	`}
-
-	@media (min-width: 765px) {
-		transform: translate(10%, -65%);
-	}
-
 	${screenSize.xmd`
-		transform: translate(40%, -65%);
-		
-	`}
-	${screenSize.lg`
-		transform: translate(50%, -68%);
+		transform: translate(50%, 25%);
 		
 	`}
 	${screenSize.xl`
-		transform: translate(70%, -65%);
+		transform: translate(70%, 25%);
 		
 	`}
 `
@@ -157,7 +150,7 @@ export const Total = styled.span`
 export const Amount = styled.span`
 	font-size: 15px;
 `
-export const CartModalButton = styled.button`
+export const CartModalButton = styled(Link)`
 	width: 100%;
 	font-size: 13px;
 	font-weight: 600;
@@ -169,5 +162,6 @@ export const CartModalButton = styled.button`
 	border: none;
 	outline-style: none;
 	text-transform: uppercase;
+	text-decoration: none;
 	font-family: Manrope;
 `
