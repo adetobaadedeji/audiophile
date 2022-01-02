@@ -14,7 +14,7 @@ export const inputs = [
 	{
 		name: 'phone',
 		type: 'text',
-		placeholder: 'phone number',
+		placeholder: '+1 202-555-0136',
 		label: 'phone number',
 	},
 	{
@@ -41,14 +41,31 @@ export const inputs = [
 		placeholder: 'united states',
 		label: 'country',
 	},
-	// {
-	// 	name: 'paymentMode',
-	// 	type: 'radio',
-	// 	label: 'E-Money',
-	// },
-	// {
-	// 	name: 'paymentMode',
-	// 	type: 'radio',
-	// 	label: 'Cash on Delivery',
-	// },
+	{
+		name: 'paymentMode',
+		type: 'radio',
+		id: 'emoney',
+		label: 'e-Money',
+		value: 'e-Money',
+		defaultChecked: true,
+	},
+	{
+		name: 'paymentMode',
+		type: 'radio',
+		id: 'cash',
+		label: 'Cash on Delivery',
+		value: 'Cash on Delivery',
+	},
+	{
+		name: 'eMoneyNumber',
+		type: 'text',
+		placeholder: '238521993',
+		label: 'e-Money Number',
+	},
+	{
+		name: 'eMoneyPIN',
+		type: 'text',
+		placeholder: '6891',
+		label: 'e-Money PIN',
+	},
 ]

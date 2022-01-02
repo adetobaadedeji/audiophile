@@ -35,7 +35,7 @@ const CartModal = () => {
 	const products = useSelector(selectCartProducts)
 	const total = useSelector(selectCartTotal)
 
-	const handleOverlayToggle = () => {
+	const handleCartToggle = () => {
 		dispatch(toggleCart())
 	}
 
@@ -45,7 +45,7 @@ const CartModal = () => {
 
 	return (
 		<CartModalWrapper>
-			<CartModalOverlay isCartOpen={isCartOpen} onClick={handleOverlayToggle} />
+			<CartModalOverlay isCartOpen={isCartOpen} onClick={handleCartToggle} />
 			<CartModalContainer>
 				<CartModalContent isCartOpen={isCartOpen}>
 					<CartModalHeader>
@@ -68,7 +68,9 @@ const CartModal = () => {
 							<Total>Total</Total>
 							<Amount>$ {total.toLocaleString('en-US')}</Amount>
 						</TotalAmount>
-						<CartModalButton to='/checkout'>Checkout</CartModalButton>
+						<CartModalButton to='/checkout' onClick={handleCartToggle}>
+							Checkout
+						</CartModalButton>
 					</CartModalFooter>
 				</CartModalContent>
 			</CartModalContainer>

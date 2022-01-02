@@ -86,6 +86,7 @@ html {
 }
 
 body {
+background-color: var(--color-gray-100);
 font-family: 'Manrope', sans-serif;
 padding-top: 6.9rem;
 
