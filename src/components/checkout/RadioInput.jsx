@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { screenSize } from '../../globalStyles'
+
 
 const RadioInput = (props) => {
 	const { label, name, register, errors, ...inputProps } = props
@@ -18,6 +20,10 @@ export default RadioInput
 
 const RadioInputContainer = styled.div`
 	width: 100%;
+
+	${screenSize.sm`
+		margin-bottom: 1rem;
+	`}
 `
 const Input = styled.input``
 
@@ -31,6 +37,12 @@ const Label = styled.label`
 	border-radius: var(--radius-2);
 	border: 2px solid var(--color-gray-400);
 	padding: 1.5rem 2rem;
+
+	${screenSize.sm`
+    font-size: 0.94rem;
+		padding: 1.1rem 1.5rem;
+
+  `}
 
 	&:focus-within {
 		border: 2px solid var(--color-main-normal);

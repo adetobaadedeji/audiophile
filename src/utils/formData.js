@@ -22,6 +22,7 @@ export const inputs = [
 		type: 'text',
 		placeholder: '1137 Williams Avenue',
 		label: 'address',
+		width: '100%'
 	},
 	{
 		name: 'zipCode',

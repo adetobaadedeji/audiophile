@@ -11,8 +11,8 @@ export const FormWrapper = styled.div`
 	flex-direction: column;
 	gap: 30px;
 
-	${screenSize.xmd`
-    width: 100%;
+	${screenSize.sm`
+    	padding: 2rem 2rem;
   `}
 `
 export const FormContainer = styled.form`
@@ -33,17 +33,47 @@ export const FormHeader = styled.h1`
 	text-transform: uppercase;
 	font-size: 2.8rem;
 	letter-spacing: 0.1rem;
+
+	${screenSize.sm`
+    font-size: 1.86rem;
+  `}
 `
 export const FormSectionHeader = styled.h3`
 	text-transform: uppercase;
 	font-size: 1.3rem;
 	letter-spacing: 0.1rem;
-  color: var(--color-main-normal);
+	color: var(--color-main-normal);
+
+	${screenSize.sm`
+    font-size: 0.88rem;
+  `}
 `
 export const InputsWrapper = styled.div`
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	gap: 25px;
+
+	span {
+		text-transform: capitalize;
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-bottom: -12px;
+
+		${screenSize.sm`
+    font-size: 0.8rem;
+		margin-bottom: 12px;
+
+  `}
+	}
+
+	${screenSize.sm`
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 0px;
+
+	`}
 `
 export const CashOnDelivery = styled.div`
 	display: flex;

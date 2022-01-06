@@ -58,7 +58,7 @@ const CheckoutForm = () => {
 					</InputsWrapper>
 				</FormSection>
 				<FormSection>
-					<FormSectionHeader>shipping details</FormSectionHeader>
+					<FormSectionHeader>shipping info</FormSectionHeader>
 					<InputsWrapper>
 						{inputs.slice(3, 7).map((input, index) => (
 							<TextInput
@@ -73,14 +73,17 @@ const CheckoutForm = () => {
 				<FormSection>
 					<FormSectionHeader>payment details</FormSectionHeader>
 					<InputsWrapper>
-						{inputs.slice(7, 9).map((input, index) => (
-							<RadioInput
-								key={index}
-								register={register}
-								errors={errors}
-								{...input}
-							/>
-						))}
+					<span>Payment</span>
+						{/* <div> */}
+							{inputs.slice(7, 9).map((input, index) => (
+								<RadioInput
+									key={index}
+									register={register}
+									errors={errors}
+									{...input}
+								/>
+							))}
+						{/* </div> */}
 					</InputsWrapper>
 				</FormSection>
 				<FormSection>
