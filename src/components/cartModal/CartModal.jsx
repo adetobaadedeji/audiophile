@@ -57,7 +57,7 @@ const CartModal = () => {
 					<CartModalMain products={products}>
 						{products.length > 0 ? (
 							products.map((product, index) => (
-								<CartItem key={index} product={product} />
+								<CartItem key={index} product={product} showButtons='true'/>
 							))
 						) : (
 							<span>Your cart is empty!</span>

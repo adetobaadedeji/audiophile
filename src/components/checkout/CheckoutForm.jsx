@@ -73,8 +73,8 @@ const CheckoutForm = () => {
 				<FormSection>
 					<FormSectionHeader>payment details</FormSectionHeader>
 					<InputsWrapper>
-					<span>Payment</span>
-						{/* <div> */}
+						<h4>Payment Method</h4>
+						<section>
 							{inputs.slice(7, 9).map((input, index) => (
 								<RadioInput
 									key={index}
@@ -83,7 +83,7 @@ const CheckoutForm = () => {
 									{...input}
 								/>
 							))}
-						{/* </div> */}
+						</section>
 					</InputsWrapper>
 				</FormSection>
 				<FormSection>

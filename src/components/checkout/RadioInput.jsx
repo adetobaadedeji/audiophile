@@ -20,14 +20,12 @@ export default RadioInput
 
 const RadioInputContainer = styled.div`
 	width: 100%;
-
-	${screenSize.sm`
-		margin-bottom: 1rem;
-	`}
+	margin-bottom: 1rem;
 `
 const Input = styled.input``
 
 const Label = styled.label`
+	width: 100%;
 	font-size: 1.4rem;
 	font-weight: bold;
 	line-height: 1.1;
@@ -55,9 +53,9 @@ const Label = styled.label`
 		margin: 0;
 		font: inherit;
 		color: var(--color-gray-400);
-		width: 1.15em;
-		height: 1.15em;
-		border: 0.12em solid var(--color-gray-400);
+		width: 16px;
+		height: 16px;
+		border: 2px solid var(--color-gray-400);
 		border-radius: 50%;
 		display: grid;
 		place-content: center;
@@ -68,15 +66,15 @@ const Label = styled.label`
 	} */
 
 	input[type='radio']:checked {
-		border: 0.12em solid var(--color-main-normal);
+		border: 2px solid var(--color-main-normal);
 	}
 
 	input[type='radio']::before {
 		content: '';
-		width: 0.6em;
-		height: 0.6em;
+		width: 8px;
+		height: 8px;
 		border-radius: 50%;
-		transform: scale(0);
+		transform: scale(1);
 		transition: 120ms transform ease-in-out;
 		box-shadow: inset 1em 1em var(--color-main-normal);
 		background-color: var(--color-main-normal);

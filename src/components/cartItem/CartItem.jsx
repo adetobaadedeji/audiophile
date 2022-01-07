@@ -6,13 +6,14 @@ import {
 	ControlButtonsContainer,
 	Image,
 	ImageContainer,
+	ItemQuantity,
 	ProductNamePrice,
 	ProductName,
 	ProductPrice,
 } from './CartItem.styles'
 
-const CartItem = ({ product }) => {
-	const { cartImage, shortName, price, name } = product
+const CartItem = ({ product, showButtons }) => {
+	const { cartImage, shortName, price, name, quantity } = product
 
 	return (
 		<CartItemContainer>
@@ -23,9 +24,13 @@ const CartItem = ({ product }) => {
 				<ProductName>{shortName}</ProductName>
 				<ProductPrice>$ {price.toLocaleString('en-US')}</ProductPrice>
 			</ProductNamePrice>
-			<ControlButtonsContainer>
-				<ControlButtons product={product} small='true' />
-			</ControlButtonsContainer>
+			{showButtons ? (
+				<ControlButtonsContainer>
+					<ControlButtons product={product} small='true' />
+				</ControlButtonsContainer>
+			) : (
+				<ItemQuantity>x{quantity}</ItemQuantity>
+			)}
 		</CartItemContainer>
 	)
 }

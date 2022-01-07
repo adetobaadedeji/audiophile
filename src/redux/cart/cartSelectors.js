@@ -48,5 +48,5 @@ export const selectVatFee = createSelector(
 
 export const selectGrandTotal = createSelector(
 	[selectCartTotal, selectShippingFee, selectVatFee],
-	(total, shipping, vat) => total + shipping + vat
+	(total, shipping, vat) => (total + shipping + vat)
 )

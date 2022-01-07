@@ -23,9 +23,10 @@ const TextInputContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	margin-bottom: 2rem;
 
-	${screenSize.sm`
-		width: ${({width}) => width ? '100%' : '49%'};
+	${screenSize.md`
+		width: ${({ width }) => (width ? '100%' : '49%')};
 		margin-bottom: 1rem;
 	`}
 `
@@ -40,6 +41,9 @@ const Label = styled.label`
 	font-weight: 700;
 
 	${screenSize.sm`
+    font-size: 0.858rem;
+  `}
+	${screenSize.md`
     font-size: 0.8rem;
   `}
 `

@@ -1,12 +1,12 @@
 import React from 'react'
-import CheckoutForm from '../../components/checkout/CheckoutForm'
+import Checkout from '../../components/checkout/Checkout'
 import SectionContainer from '../../components/sectionContainer/SectionContainer'
 
 const CheckoutPage = () => {
   return (
     
       <SectionContainer>
-        <CheckoutForm />
+        <Checkout />
       </SectionContainer>
     
   )

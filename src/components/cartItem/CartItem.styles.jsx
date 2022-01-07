@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { screenSize } from '../../globalStyles'
 
 export const CartItemContainer = styled.main`
 	width: 100%;
@@ -13,7 +14,9 @@ export const Image = styled.img`
 	width: 100%;
 	border-radius: var(--radius);
 `
-export const ProductNamePrice = styled.div``
+export const ProductNamePrice = styled.div`
+	margin-right: auto;
+`
 export const ProductName = styled.p`
 	font-size: 13.4px;
 	font-weight: 700;
@@ -24,6 +27,22 @@ export const ProductPrice = styled.p`
 	font-weight: 600;
 	color: var(--color-gray-600);
 `
-export const ControlButtonsContainer = styled.div`
-	margin-left: auto;
+export const ControlButtonsContainer = styled.div``
+
+export const ItemQuantity = styled.p`
+	font-size: 1.4rem;
+	color: var(--color-gray-500);
+	font-weight: 600;
+
+	${screenSize.sm`
+		font-size: 1.07rem;
+	`}
+
+	${screenSize.md`
+		font-size: 1rem;
+	`}
+
+	${screenSize.md`
+		font-size: 0.937rem;
+	`}
 `
