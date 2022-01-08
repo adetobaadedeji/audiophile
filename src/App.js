@@ -14,6 +14,7 @@ import ProductPage from './pages/product/ProductPage'
 import SpeakersPage from './pages/speakers/SpeakersPage'
 import CartModal from './components/cartModal/CartModal'
 import CheckoutPage from './pages/checkout/CheckoutPage'
+import CheckoutModal from './components/checkoutModal/CheckoutModal'
 
 const routes = [
 	{
@@ -49,6 +50,7 @@ function App() {
 			<ScrollToTop />
 			<GlobalStyles />
 			<Header />
+			<CheckoutModal />
 			<CartModal />
 			<SideMenu />
 			<Switch>

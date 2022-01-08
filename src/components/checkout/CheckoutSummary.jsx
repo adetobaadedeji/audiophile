@@ -27,11 +27,11 @@ import {
 const CheckoutSummary = () => {
 	// const transform = (value) => Number.parseInt(value).toFixed(0)
 
-	const EmptyCart = () => {
-		if (products.length < 1) {
-			toast.error(`Your cart is empty!`, toastAction)
-		}
-	}
+	// const EmptyCart = () => {
+	// 	if (products.length < 1) {
+	// 		toast.error(`Your cart is empty!`, toastAction)
+	// 	}
+	// }
 
 	const total = useSelector(selectCartTotal)
 	const shipping = useSelector(selectShippingFee)
@@ -78,7 +78,8 @@ const CheckoutSummary = () => {
 							$ {grandTotal.toLocaleString('en-US')}
 						</Amount>
 					</TitleTotal>
-					<SummaryButton form='checkoutForm' type='submit' onClick={EmptyCart}>
+					{/* <SummaryButton form='checkoutForm' type='submit' onClick={EmptyCart}> */}
+					<SummaryButton form='checkoutForm' type='submit' >
 						Continue & Pay
 					</SummaryButton>
 				</SummaryFooter>

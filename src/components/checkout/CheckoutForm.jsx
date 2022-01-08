@@ -5,6 +5,12 @@ import { validationSchema } from '../../utils/yupSchema'
 import { inputs } from '../../utils/formData'
 import TextInput from './TextInput'
 import RadioInput from './RadioInput'
+import { selectCartQuantity } from '../../redux/cart/cartSelectors'
+import { useSelector, useDispatch } from 'react-redux'
+import { toast } from 'react-toastify'
+import { toastAction } from '../../utils/helper'
+import { getFormData } from '../../redux/formData/formDataSlice'
+import { toggleCheckout } from '../../redux/uiToggle/uiToggleSlice'
 import {
 	CashOnDelivery,
 	Image,
@@ -18,6 +24,8 @@ import {
 } from './CheckoutForm.styles'
 
 const CheckoutForm = () => {
+	const dispatch = useDispatch()
+	const cartQuantity = useSelector(selectCartQuantity)
 	const formOptions = { resolver: yupResolver(validationSchema) }
 	const {
 		register,
@@ -33,8 +41,16 @@ const CheckoutForm = () => {
 	}, [trigger])
 
 	function onSubmit(data) {
-		alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4))
-		reset()
+		// alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4))
+		if (cartQuantity < 1 ) {
+			toast.error('Your cart is empty', toastAction)
+		} else {
+			if (data) {
+				dispatch(getFormData(data))
+				reset()
+				dispatch(toggleCheckout())
+			}
+		}
 		return false
 	}
 

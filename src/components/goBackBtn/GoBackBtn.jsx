@@ -20,7 +20,7 @@ const GoBackBtn = () => {
 const Button = styled.button`
 	font-size: 1.5rem;
 	color: var(--color-gray-800);
-	background-color: white;
+	background-color: var(--color-gray-100);
 	opacity: 0.8;
 	border: none;
 	outline-style: none;
@@ -28,7 +28,7 @@ const Button = styled.button`
 	margin-top: 2rem;
 	letter-spacing: 0.05rem;
 	text-align: left;
-  transition: var(--transition);
+	transition: var(--transition);
 
 	&:hover {
 		color: var(--color-main-normal);

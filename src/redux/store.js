@@ -14,7 +14,8 @@ import autoMergeLevel2 from 'reduxjs-toolkit-persist/lib/stateReconciler/autoMer
 
 import uiToggleReducer from './uiToggle/uiToggleSlice'
 import productsReducer from './products/productsSlice'
-import cartSlice from './cart/cartSlice'
+import cartReducer from './cart/cartSlice'
+import formDataReducer from './formData/formDataSlice'
 
 const persistConfig = {
 	key: 'root',
@@ -27,7 +28,8 @@ const persistConfig = {
 const reducers = combineReducers({
 	uiToggle: uiToggleReducer,
 	products: productsReducer,
-	cart: cartSlice,
+	cart: cartReducer,
+	formData: formDataReducer,
 })
 
 const persistedReducer = persistReducer(persistConfig, reducers)
