@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { screenSize } from '../../globalStyles'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 export const SummaryContainer = styled.section`
 	width: 100%;
@@ -124,7 +124,7 @@ export const SummaryFooter = styled.footer`
 	gap: 25px;
 `
 
-export const SummaryButton = styled(Link)`
+export const SummaryButton = styled.button`
 	width: 100%;
 	font-size: 13px;
 	font-weight: 600;

@@ -60,11 +60,11 @@ export const inputs = [
 	{
 		name: 'eMoneyNumber',
 		type: 'text',
-		placeholder: '238521993',
+		placeholder: '2385219935',
 		label: 'e-Money Number',
 	},
 	{
-		name: 'eMoneyPIN',
+		name: 'eMoneyPin',
 		type: 'text',
 		placeholder: '6891',
 		label: 'e-Money PIN',

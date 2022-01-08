@@ -47,7 +47,11 @@ const Label = styled.label`
     font-size: 0.8rem;
   `}
 `
-const Small = styled.small``
+const Small = styled.small`
+	font-size: 12px;
+	color: red;
+	font-weight: 500;
+`
 
 const Input = styled.input`
 	width: 100%;

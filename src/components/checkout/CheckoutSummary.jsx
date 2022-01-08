@@ -1,5 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { toast } from 'react-toastify'
+import { toastAction } from '../../utils/helper'
 import {
 	// selectCartQuantity,
 	selectCartProducts,
@@ -16,21 +18,27 @@ import {
 	SummaryFooter,
 	SummaryHeader,
 	SummaryMain,
-  Title,
-  TitleTotal,
-  Amount,
-  SummaryButton,
+	Title,
+	TitleTotal,
+	Amount,
+	SummaryButton,
 } from './CheckoutSummary.styles'
 
 const CheckoutSummary = () => {
-  // const transform = (value) => Number.parseInt(value).toFixed(0)
+	// const transform = (value) => Number.parseInt(value).toFixed(0)
 
-  const total = useSelector(selectCartTotal)
-  const shipping = (useSelector(selectShippingFee))
-  const vat = useSelector(selectVatFee)
-  const grandTotal = useSelector(selectGrandTotal)
+	const EmptyCart = () => {
+		if (products.length < 1) {
+			toast.error(`Your cart is empty!`, toastAction)
+		}
+	}
 
-  const products = useSelector(selectCartProducts)
+	const total = useSelector(selectCartTotal)
+	const shipping = useSelector(selectShippingFee)
+	const vat = useSelector(selectVatFee)
+	const grandTotal = useSelector(selectGrandTotal)
+
+	const products = useSelector(selectCartProducts)
 
 	return (
 		<div>
@@ -43,10 +51,10 @@ const CheckoutSummary = () => {
 						))
 					) : (
 						<span>
-              No summary to display. 
-              <br/>
-              Your cart is empty.
-            </span>
+							No summary to display.
+							<br />
+							Your cart is empty.
+						</span>
 					)}
 				</SummaryMain>
 				<SummaryCosts>
@@ -66,9 +74,13 @@ const CheckoutSummary = () => {
 				<SummaryFooter>
 					<TitleTotal>
 						<Title>Grand Total</Title>
-						<Amount colored='true'>$ {grandTotal.toLocaleString('en-US')}</Amount>
-					</TitleTotal >
-          <SummaryButton to=''>Continue & Pay</SummaryButton>
+						<Amount colored='true'>
+							$ {grandTotal.toLocaleString('en-US')}
+						</Amount>
+					</TitleTotal>
+					<SummaryButton form='checkoutForm' type='submit' onClick={EmptyCart}>
+						Continue & Pay
+					</SummaryButton>
 				</SummaryFooter>
 			</SummaryContainer>
 		</div>

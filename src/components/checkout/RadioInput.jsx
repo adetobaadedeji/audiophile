@@ -74,7 +74,7 @@ const Label = styled.label`
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
-		transform: scale(1);
+		transform: scale(0);
 		transition: 120ms transform ease-in-out;
 		box-shadow: inset 1em 1em var(--color-main-normal);
 		background-color: var(--color-main-normal);

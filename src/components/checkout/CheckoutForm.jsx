@@ -43,7 +43,7 @@ const CheckoutForm = () => {
 	return (
 		<FormWrapper>
 			<FormHeader>Checkout</FormHeader>
-			<FormContainer onSubmit={handleSubmit(onSubmit)}>
+			<FormContainer id='checkoutForm' onSubmit={handleSubmit(onSubmit)}>
 				<FormSection>
 					<FormSectionHeader>billing details</FormSectionHeader>
 					<InputsWrapper>
