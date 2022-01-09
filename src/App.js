@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
- import { ToastContainer } from 'react-toastify'
- import 'react-toastify/dist/ReactToastify.css'
+import { useSelector } from 'react-redux'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import SideMenu from './components/sideMenu/SideMenu'
@@ -15,6 +16,11 @@ import SpeakersPage from './pages/speakers/SpeakersPage'
 import CartModal from './components/cartModal/CartModal'
 import CheckoutPage from './pages/checkout/CheckoutPage'
 import CheckoutModal from './components/checkoutModal/CheckoutModal'
+import {
+	isCartOpenSelector,
+	isMenuOpenSelector,
+	isCheckoutOpenSelector,
+} from './redux/uiToggle/uiToggleSlice'
 
 const routes = [
 	{
@@ -45,6 +51,19 @@ const routes = [
 ]
 
 function App() {
+	const isCartOpen = useSelector(isCartOpenSelector)
+	const isMenuOpen = useSelector(isMenuOpenSelector)
+	const isCheckoutOpen = useSelector(isCheckoutOpenSelector)
+
+	useEffect(() => {
+		if(isCartOpen || isMenuOpen || isCheckoutOpen){
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = 'initial'
+		}
+	}, [isCartOpen, isMenuOpen, isCheckoutOpen])
+
+
 	return (
 		<Router>
 			<ScrollToTop />

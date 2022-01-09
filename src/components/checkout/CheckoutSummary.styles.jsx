@@ -17,7 +17,8 @@ export const SummaryContainer = styled.section`
     padding: 2rem 2rem;
 		gap: 1.8rem;
     min-width: 20rem;
-    
+		position: sticky;
+		top: 7rem;
   `}
 `
 export const SummaryHeader = styled.h1`
@@ -137,4 +138,5 @@ export const SummaryButton = styled.button`
 	text-transform: uppercase;
 	text-decoration: none;
 	font-family: Manrope;
+	cursor: pointer;
 `

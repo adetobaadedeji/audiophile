@@ -10,9 +10,10 @@ import {
 	selectCartProducts,
 	selectCartTotal,
 } from '../../redux/cart/cartSelectors'
-
+import CartLogo from '../../assets/shared/big-cart.svg'
 import {
 	Amount,
+	Empty,
 	CartQuantity,
 	CartModalButton,
 	CartModalContainer,
@@ -48,30 +49,37 @@ const CartModal = () => {
 			<CartModalOverlay isCartOpen={isCartOpen} onClick={handleCartToggle} />
 			<CartModalContainer>
 				<CartModalContent isCartOpen={isCartOpen}>
-					<CartModalHeader>
-						<CartQuantity>Cart ({cartQuantity})</CartQuantity>
-						<RemoveButton onClick={handleClearAllFromCart}>
-							Remove All
-						</RemoveButton>
-					</CartModalHeader>
+					{products.length > 0 && (
+						<CartModalHeader>
+							<CartQuantity>Cart ({cartQuantity})</CartQuantity>
+							<RemoveButton onClick={handleClearAllFromCart}>
+								Remove All
+							</RemoveButton>
+						</CartModalHeader>
+					)}
 					<CartModalMain products={products}>
 						{products.length > 0 ? (
 							products.map((product, index) => (
-								<CartItem key={index} product={product} showButtons='true'/>
+								<CartItem key={index} product={product} showButtons='true' />
 							))
 						) : (
-							<span>Your cart is empty!</span>
+							<Empty>
+								<span>Your cart is empty!</span>
+								<img src={CartLogo} alt='' />
+							</Empty>
 						)}
 					</CartModalMain>
-					<CartModalFooter>
-						<TotalAmount>
-							<Total>Total</Total>
-							<Amount>$ {total.toLocaleString('en-US')}</Amount>
-						</TotalAmount>
-						<CartModalButton to='/checkout' onClick={handleCartToggle}>
-							Checkout
-						</CartModalButton>
-					</CartModalFooter>
+					{products.length > 0 && (
+						<CartModalFooter>
+							<TotalAmount>
+								<Total>Total</Total>
+								<Amount>$ {total.toLocaleString('en-US')}</Amount>
+							</TotalAmount>
+							<CartModalButton to='/checkout' onClick={handleCartToggle}>
+								Checkout
+							</CartModalButton>
+						</CartModalFooter>
+					)}
 				</CartModalContent>
 			</CartModalContainer>
 		</CartModalWrapper>
@@ -79,3 +87,4 @@ const CartModal = () => {
 }
 
 export default CartModal
+

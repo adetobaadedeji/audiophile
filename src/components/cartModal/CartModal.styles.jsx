@@ -92,7 +92,13 @@ export const CartModalMain = styled.main`
 	height: 250px;
 	max-height: 250px;
 	overflow: auto;
+	
 
+`
+export const Empty = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 
 	span {
 		font-size: 15px;
@@ -100,11 +106,6 @@ export const CartModalMain = styled.main`
 		font-weight: 500;
 	}
 `
-// export const CartModalMainWrapper = styled.main`
-// 	width: 100%;
-// 	display: flex;
-// 	align-items: center;
-// `
 
 export const ImageContainer = styled.div`
 	max-width: 64px;

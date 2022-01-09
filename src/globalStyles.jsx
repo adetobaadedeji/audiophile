@@ -92,7 +92,6 @@ padding-top: 6.9rem;
  ${screenSize.md`
   padding-top: 5.3rem;
   `}
-/* min-height: 5000px; */
 }
 
 `
