@@ -24,88 +24,116 @@ export const CheckoutModalContainer = styled.aside`
 	transform: translate(-50%, -50%);
 	z-index: 2501;
 	width: 87%;
-	max-width: 320px;
-
-	/* ${screenSize.md`
-		top: 0;
-		right: 0;
-		transform: translate(-50%, 25%);
-	`}
-	${screenSize.xmd`
-		transform: translate(50%, 25%);
-		
-	`}
-	${screenSize.xl`
-		transform: translate(70%, 25%);
-		
-	`} */
+	/* max-width: 520px; */
+	max-width: 33.75rem;
 `
 export const CheckoutModalContent = styled.div`
 	background-color: var(--color-white);
 	width: 100%;
-	padding: 30px 25px;
+	padding: 30px 20px;
 	min-height: 420px;
-	height: 420px;
-	max-height: 420px;
 	overflow: auto;
 	border-radius: var(--radius);
 	display: ${({ isCheckoutOpen }) => (isCheckoutOpen ? 'flex' : 'none')};
 	flex-direction: column;
+	gap: 20px;
+
+	${screenSize.md`
+		gap: 30px;
+	`}
 `
 export const CheckoutModalHeader = styled.h1`
 	width: 100%;
-	/* display: flex;
-	justify-content: space-between;
-	font-size: 15px; */
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+
+	${screenSize.sm`
+		font-size: 24px;
+	`}
+
+	${screenSize.md`
+		font-size: 2rem;
+		line-height: 2.4rem;
+	`}
 `
 export const CheckoutModalLogo = styled.div`
-	display: flex;
-	flex-direction: column;
-	justify-content: start;
-	align-items: start;
+display: flex;
+
+img {
+	object-fit: contain;
+}
 `
-export const CheckoutModalMessage = styled.p``
+export const CheckoutModalMessage = styled.p`
+	font-size: 1.5rem;
+	font-weight: 400;
+	letter-spacing: 0.05rem;
+	color: var(--color-gray-600);
+
+	span {
+		color: var(--color-main-normal);
+	}
+	${screenSize.sm`
+		font-size: 16px;
+	`}
+`
 
 export const CheckoutModalMain = styled.main`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 20px 0 15px;
-	gap: 13px;
-	height: 250px;
-	max-height: 250px;
-	overflow: auto;
+	border-radius: var(--radius);
+	background-color: var(--color-gray-300);
 
-  ${screenSize.xmd`
+${screenSize.xmd`
     flex-direction: row;
   `}
+`
+export const Summary = styled.div`
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color-gray-300);
+	padding: 1.5rem 2rem;
+	border-radius: var(--radius);
 
-	div {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		background-color: var(--color-gray-300);
-    padding: 1.5rem 2rem;
+	${screenSize.xmd`
+		padding: 1rem 1.5rem;
+	`}
 
-		p {
-			font-size: 15px;
-			text-align: center;
-			font-weight: 500;
-			border-top: 2px solid var(--color-gray-600);
-		}
+	span {
+		text-align: center;
+		font-size: 13px;
+		font-weight: 500;
+		color: var(--color-gray-600);
+		margin-top: 5px;
+		padding-top: 5px;
+		border-top: 1px solid var(--color-gray-500);
 	}
 `
+
 export const TotalAmount = styled.div`
+	width: 100%;
 	display: flex;
-	justify-content: space-between;
-	margin-bottom: 20px;
-	font-weight: 600;
+	flex-direction: column;
+	gap: 10px;
+	align-items: start;
 	background-color: var(--color-black);
-	padding: 2.5rem 2rem;
+	padding: 2rem 2rem;
+	border-bottom-left-radius: var(--radius);
+	border-bottom-right-radius: var(--radius);
+
+	${screenSize.xmd`
+		min-height: 137px;
+		padding: 2.5rem 2rem;
+		border-bottom-left-radius: 0;
+		border-top-right-radius: var(--radius);
+	`}
 `
 export const Total = styled.span`
 	font-size: 15px;
+	font-weight: 600;
 	color: var(--color-gray-600);
 	letter-spacing: 1px;
 	text-transform: uppercase;

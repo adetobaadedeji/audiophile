@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { screenSize } from '../../globalStyles'
-// import { Link } from 'react-router-dom'
 
 export const SummaryContainer = styled.section`
 	width: 100%;

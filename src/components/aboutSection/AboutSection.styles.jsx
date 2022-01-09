@@ -87,10 +87,12 @@ export const ContentHeading = styled.div`
 	${screenSize.md`
     max-width: 70%;
 		line-height: 2.6rem;
+		margin: 3.5rem auto 2rem;
+
   `}
 	${screenSize.xmd`
 		max-width: 80%;
-		margin: 0 0 3rem;
+		margin: 0 0 2rem;
 		font-size: 2.3rem;
 		line-height: 2.4rem;
 		font-weight: 700;

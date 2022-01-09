@@ -1,9 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { toast } from 'react-toastify'
-import { toastAction } from '../../utils/helper'
 import {
-	// selectCartQuantity,
 	selectCartProducts,
 	selectCartTotal,
 	selectShippingFee,
@@ -25,14 +22,6 @@ import {
 } from './CheckoutSummary.styles'
 
 const CheckoutSummary = () => {
-	// const transform = (value) => Number.parseInt(value).toFixed(0)
-
-	// const EmptyCart = () => {
-	// 	if (products.length < 1) {
-	// 		toast.error(`Your cart is empty!`, toastAction)
-	// 	}
-	// }
-
 	const total = useSelector(selectCartTotal)
 	const shipping = useSelector(selectShippingFee)
 	const vat = useSelector(selectVatFee)
@@ -78,7 +67,6 @@ const CheckoutSummary = () => {
 							$ {grandTotal.toLocaleString('en-US')}
 						</Amount>
 					</TitleTotal>
-					{/* <SummaryButton form='checkoutForm' type='submit' onClick={EmptyCart}> */}
 					<SummaryButton form='checkoutForm' type='submit' >
 						Continue & Pay
 					</SummaryButton>

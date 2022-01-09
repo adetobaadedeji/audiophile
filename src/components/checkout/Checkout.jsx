@@ -20,7 +20,7 @@ const CheckoutContainer = styled.section`
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
-	margin: 3rem 0;
+	padding: 3rem 0;
 
 	${screenSize.xmd`
     flex-direction: row;

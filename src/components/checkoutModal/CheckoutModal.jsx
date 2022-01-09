@@ -7,9 +7,9 @@ import {
 } from '../../redux/uiToggle/uiToggleSlice'
 import {
 	selectCartProducts,
-	selectCartTotal,
+	selectGrandTotal,
 } from '../../redux/cart/cartSelectors'
-
+import Mark from '../../assets/shared/success.svg'
 import {
 	Amount,
 	CheckoutModalLogo,
@@ -17,21 +17,23 @@ import {
 	CheckoutModalButton,
 	CheckoutModalContainer,
 	CheckoutModalContent,
-	// CheckoutModalFooter,
 	CheckoutModalHeader,
 	CheckoutModalMain,
 	CheckoutModalOverlay,
 	CheckoutModalWrapper,
 	Total,
 	TotalAmount,
+	Summary,
 } from './CheckoutModal.styles'
 import CartItem from '../cartItem/CartItem'
+import { formDataSelector } from '../../redux/formData/formDataSlice'
 
 const CheckoutModal = () => {
 	const dispatch = useDispatch()
 	const isCheckoutOpen = useSelector(isCheckoutOpenSelector)
+	const formData = useSelector(formDataSelector)
 	const products = useSelector(selectCartProducts)
-	const total = useSelector(selectCartTotal)
+	const grandTotal = useSelector(selectGrandTotal)
 
 	const handleCheckoutToggle = () => {
 		dispatch(toggleCheckout())
@@ -40,23 +42,23 @@ const CheckoutModal = () => {
 
 	return (
 		<CheckoutModalWrapper>
-			<CheckoutModalOverlay
-				isCheckoutOpen={isCheckoutOpen}
-				// onClick={handleCheckoutToggle}
-			/>
+			<CheckoutModalOverlay isCheckoutOpen={isCheckoutOpen} />
 			<CheckoutModalContainer>
 				<CheckoutModalContent isCheckoutOpen={isCheckoutOpen}>
-					<CheckoutModalLogo></CheckoutModalLogo>
+					<CheckoutModalLogo>
+						<img src={Mark} alt='Mark Logo' />
+					</CheckoutModalLogo>
 					<CheckoutModalHeader>
 						{' '}
 						thank you
 						<br /> for your order
 					</CheckoutModalHeader>
 					<CheckoutModalMessage>
-						{/* {username}, you will receive an email confirmation shortly. */}
+						{formData && <span>{formData.name}</span>}, you will receive an email confirmation
+						shortly.
 					</CheckoutModalMessage>
-					<CheckoutModalMain >
-						<div>
+					<CheckoutModalMain>
+						<Summary>
 							{products.length > 0 &&
 								products
 									.map((product, index) => (
@@ -64,23 +66,20 @@ const CheckoutModal = () => {
 									))
 									.slice(0, 1)}
 							{products.length > 1 && (
-								<p>
+								<span>
 									and {products.length - 1} other item
 									{products.length > 2 && 's'}
-								</p>
+								</span>
 							)}
-						</div>
-
+						</Summary>
 						<TotalAmount>
 							<Total>Grand Total</Total>
-							<Amount>$ {total.toLocaleString('en-US')}</Amount>
+							<Amount>$ {grandTotal.toLocaleString('en-US')}</Amount>
 						</TotalAmount>
 					</CheckoutModalMain>
-					{/* <CheckoutModalFooter> */}
 					<CheckoutModalButton to='/' onClick={handleCheckoutToggle}>
 						Back to Home
 					</CheckoutModalButton>
-					{/* </CheckoutModalFooter> */}
 				</CheckoutModalContent>
 			</CheckoutModalContainer>
 		</CheckoutModalWrapper>

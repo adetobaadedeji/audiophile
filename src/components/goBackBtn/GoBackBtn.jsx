@@ -20,7 +20,8 @@ const GoBackBtn = () => {
 const Button = styled.button`
 	font-size: 1.5rem;
 	color: var(--color-gray-800);
-	background-color: var(--color-gray-100);
+	/* background-color: var(--color-gray-100); */
+	background-color: inherit;
 	opacity: 0.8;
 	border: none;
 	outline-style: none;
