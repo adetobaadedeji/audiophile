@@ -33,7 +33,7 @@ export const GlobalStyles = createGlobalStyle`
   // Colors
 --color-main-normal: hsl(22, 65%, 57%);
 --color-main-light: hsl(21, 94%, 75%);
---color-main-dark: hsl(0, 65%, 49%);
+--color-main-dark: hsl(22, 85%, 57%);
 
 --color-white: hsl(0, 0%, 100%);
 --color-black: hsl(0, 0%, 0%);

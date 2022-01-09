@@ -16,6 +16,7 @@ import SpeakersPage from './pages/speakers/SpeakersPage'
 import CartModal from './components/cartModal/CartModal'
 import CheckoutPage from './pages/checkout/CheckoutPage'
 import CheckoutModal from './components/checkoutModal/CheckoutModal'
+import ErrorPage from './components/ErrorPage'
 import {
 	isCartOpenSelector,
 	isMenuOpenSelector,
@@ -47,6 +48,10 @@ const routes = [
 	{
 		path: '/checkout',
 		component: CheckoutPage,
+	},
+	{
+		path: '*',
+		component: ErrorPage,
 	},
 ]
 
