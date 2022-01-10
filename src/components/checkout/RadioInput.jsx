@@ -62,16 +62,17 @@ const Label = styled.label`
 	}
 
 	/* Focusing the radio with a keyboard will show a solid orange line. */
-	input[type='radio']:focus-visible {
+	/* input[type='radio']:focus-visible {
 		outline: 2px solid var(--color-main-normal);
-	}
+	} */
 	/* Focusing the button with a mouse, touch, or stylus will show no outline */
-	input[type='radio']:focus:not(:focus-visible) {
+	/* input[type='radio']:focus:not(:focus-visible) {
 		outline: none;
-	}
+	} */
 
 	input[type='radio']:checked {
 		border: 2px solid var(--color-main-normal);
+		outline: none;
 	}
 
 	input[type='radio']::before {
